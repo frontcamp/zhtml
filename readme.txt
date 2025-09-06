@@ -15,7 +15,7 @@ FILE STRUCTURE
 --------------
 
 
-/demo           - HTML demos (uses files from /starter)
+/demo           - HTML demos (use files from /starter)
 /docs           - framework documentation
 /starter        - ready-to-copy files:
     /web                - static files
@@ -40,11 +40,14 @@ QUICK START
 
 
 Copy /starter as is to your project, or open /starter/index.html to see how styles are connected and how to structure the markup.
+For more usage instructions, open the HTML documentation in the /docs folder.
 
 
 ONLINE DEMOS
 ------------
 
+
+Online mirror of the /demo directory from this repository:
 
 https://folio.frontcamp.com/demo/zhtml/
 
