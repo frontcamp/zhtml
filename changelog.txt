@@ -1,0 +1,11 @@
+
+CHANGELOG
+=========
+
+Format: [MAJOR.MINOR.YYYYMMDD-HHMM] (UTC)
+Legend: > item; # note; + added; * changed; ~ outdated; - deleted; ! not done.
+
+[0.1.20250906-2040]
+# Initial file structure
++ Added license & changelog
+
