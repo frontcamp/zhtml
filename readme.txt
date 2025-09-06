@@ -1,4 +1,4 @@
 
-ZHTML Mini CSS Framework
-========================
+ZHTML - Mini CSS Framework
+==========================
 
