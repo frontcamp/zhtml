@@ -7,6 +7,7 @@ Author: Maksym Plaksin <maxim.plaksin@gmail.com>
 /**
  * [CONTENTS]
  *
+ * DEFAULTS
  * GENERAL
  * ELEMENTS
  *   A, P, .code, .pre, .hr, .divider
@@ -25,6 +26,26 @@ Author: Maksym Plaksin <maxim.plaksin@gmail.com>
  * LAYOUT
  */
 
+/* ===[ DEFAULTS ]====================================================== */
+
+
+:root {
+    --html-font-size: 100%;  /* 100% = 16px; 112.5% = 18px; */
+    
+    --fs-h1: 2.00rem;
+    --fs-h2: 1.75rem;
+    --fs-h3: 1.50rem;
+    --fs-h4: 1.35rem;
+    --fs-h5: 1.25rem;
+    --fs-h6: 1.15rem;
+    
+    --link-color: #06f;
+    --link-hover-color: #39f;
+    
+    --divider-color: currentColor;
+    }
+
+
 /* ===[ GENERAL ]======================================================= */
 
 HTML, BODY {
@@ -32,15 +53,8 @@ HTML, BODY {
     margin: 0;
     }
 
-/*
-Note: Very important to define correct font-size in HTML tag!
-All rem/em units will be calculated from this value:
-    100% == 16px  =>  960px == 60em  (default)
-    112.5% == 18px  =>  960px == 53.33em
-*/
-
 HTML {
-    font-size: 100%;  /* Base font size: 100% = 16px; 112.5% = 18px; */
+    font-size: var(--html-font-size);
     height: 100%;
     box-sizing: border-box;
     }
@@ -57,10 +71,32 @@ BODY {
 
 /* ===[ ELEMENTS ]====================================================== */
 
-A, A:visited { color: #06f; }
-A:hover, A:focus { color: #39f }
+H1, H2, H3, H4, H5, H6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: bold;
+    line-height: 1.25;
+    text-align: center;
+    margin-block: 1em .5em;
+    }
+    
+H1, .h1 { font-size: var(--fs-h1) }
+H2, .h2 { font-size: var(--fs-h2) }
+H3, .h3 { font-size: var(--fs-h3) }
+H4, .h4 { font-size: var(--fs-h4) }
+H5, .h5 { font-size: var(--fs-h5) }
+H6, .h6 { font-size: var(--fs-h6) }
 
 P { margin-block: 1em }
+
+A, A:visited {
+    color: var(--link-color);
+    text-decoration: underline;
+    }
+A:hover, A:focus {
+    color: var(--link-hover-color);
+    outline: none;
+    }
+a:focus-visible { outline: auto; }
 
 .code, .pre {
     font-family: "Courier New", Courier, monospace;
@@ -71,11 +107,10 @@ P { margin-block: 1em }
 
 .hr, .divider {
     border: none;
-    border-top: 1px solid #666;
+    border-top: 1px solid var(--divider-color);
     margin: 1.5rem 0;
     height: 0;
     clear: both;
-    overflow: hidden;
     }
 
 /* ===[ TYPOGRAPHY ]==================================================== */

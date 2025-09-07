@@ -8,11 +8,10 @@ CODE, PRE {
 
 HR {
     border: none;
-    border-top: 1px solid #666;
+    border-top: 1px solid var(--divider-color);
     margin: 1.5rem 0;
     height: 0;
     clear: both;
-    overflow: hidden;
     }
 
 BIG.trice { font-size: 1.75em }
@@ -42,3 +41,7 @@ SUB, SUP {
 SUP { top: -0.5em }
 SUB { bottom: -0.25em }
 
+*[align="left"]    { text-align: left }
+*[align="center"]  { text-align: center }
+*[align="right"]   { text-align: right }
+*[align="justify"] { text-align: justify }
