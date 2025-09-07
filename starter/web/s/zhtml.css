@@ -100,6 +100,19 @@ UL, OL {
     margin: 1em 0;
     }
 
+/* restore default markers lost by reset */
+UL { list-style: disc; }
+
+    UL UL { list-style: circle; }
+
+        UL UL UL { list-style: square; }
+        
+OL { list-style: decimal; }
+
+    OL OL { list-style: lower-alpha; }
+
+        OL OL OL { list-style: lower-roman; }
+
     UL LI, OL LI { margin: .5em 0; }
 
 .list-unstyled { list-style: none; padding-left: 0; }
