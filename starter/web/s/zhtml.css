@@ -1,13 +1,43 @@
-/* https://github.com/frontcamp/zhtml.git
-   v0.1.20250906-2040
-   License: MIT
-   Author: Maksym Plaksin <maxim.plaksin@gmail.com>
+/*
+https://github.com/frontcamp/zhtml.git
+v0.1.20250906-2040
+License: MIT
+Author: Maksym Plaksin <maxim.plaksin@gmail.com>
 */
+/**
+ * [CONTENTS]
+ *
+ * GENERAL
+ * ELEMENTS
+ *   A, P, .code, .pre, .hr, .divider
+ * TYPOGRAPHY
+ *   .fs-* - font-size
+ *   .fw-* - font-weight
+ *   .fs-* - font-style (.fs-italic, .fs-oblique, .fs-normal)
+ *   .td-* - text-decoration
+ *   .tt-* - text-transform
+ *   .ls-* - letter-spacing
+ *   .ta-* - text-align
+ *   .lh-* - line-height
+ *   .ws-nowrap, .ow-break, .hyphens, .fine-wrap
+ *   .sub, .sup
+ * EFFECTS
+ * LAYOUT
+ */
+
+/* ===[ GENERAL ]======================================================= */
 
 HTML, BODY {
     padding: 0;
     margin: 0;
     }
+
+/*
+Note: Very important to define correct font-size in HTML tag!
+All rem/em units will be calculated from this value:
+    100% == 16px  =>  960px == 60em  (default)
+    112.5% == 18px  =>  960px == 53.33em
+*/
 
 HTML {
     font-size: 100%;  /* Base font size: 100% = 16px; 112.5% = 18px; */
@@ -15,7 +45,7 @@ HTML {
     box-sizing: border-box;
     }
 
-*, *::before, *::after { box-sizing: inherit; }
+*, *::before, *::after { box-sizing: inherit }
 
 BODY {
     color: black;
@@ -24,6 +54,178 @@ BODY {
     background: white;
     min-height: 100%;
     }
+
+/* ===[ ELEMENTS ]====================================================== */
+
+A, A:visited { color: #06f; }
+A:hover, A:focus { color: #39f }
+
+P { margin-block: 1em }
+
+.code, .pre {
+    font-family: "Courier New", Courier, monospace;
+    white-space: pre-wrap;
+    margin: 1em 0;
+    overflow: auto;
+    }
+
+.hr, .divider {
+    border: none;
+    border-top: 1px solid #666;
+    margin: 1.5rem 0;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    }
+
+/* ===[ TYPOGRAPHY ]==================================================== */
+
+/* Font Size */
+
+.fs-biggest  { font-size: 1.75em }
+.fs-bigger   { font-size: 1.5em }
+.fs-big      { font-size: 1.25em }
+.fs-biggy    { font-size: 1.125em }
+
+.fs-regular  { font-size: 1rem }
+
+.fs-smally   { font-size: .9em }
+.fs-small    { font-size: .875em }
+.fs-smaller  { font-size: .75em }
+.fs-smallest { font-size: .5em }
+
+/* Font Weight */
+
+.fw-100, .fw-thin                       { font-weight: 100 }
+.fw-200, .fw-extralight, .fw-ultralight { font-weight: 200 }
+.fw-300, .fw-light                      { font-weight: 300 }
+.fw-400, .fw-regular,    .fw-normal     { font-weight: 400 }
+.fw-500, .fw-medium                     { font-weight: 500 }
+.fw-600, .fw-semibold,   .fw-demibold   { font-weight: 600 }
+.fw-700, .fw-bold                       { font-weight: 700 }
+.fw-800, .fw-extrabold,  .fw-ultrabold  { font-weight: 800 }
+.fw-900, .fw-black,      .fw-heavy      { font-weight: 900 }
+
+.fw-lighter { font-weight: lighter }
+.fw-bolder  { font-weight: bolder }
+
+/* Font Style */
+
+.fs-italic   { font-style: italic }
+.fs-oblique  { font-style: oblique }
+.fs-normal   { font-style: normal }
+
+/* Text Decoration */
+
+.td-strike, .td-strikethrough, .td-line-through { text-decoration: line-through }
+.td-overline  {
+    text-decoration-line: overline;
+    text-decoration-skip-ink: auto;
+    }
+.td-underline { 
+    text-decoration-line: underline;
+    text-decoration-skip-ink: auto;
+    text-underline-offset: .08em;
+    }
+.td-underline-overline {
+    text-decoration-line: underline overline;
+    text-decoration-skip-ink: auto;
+    }
+.td-none { text-decoration: none }
+
+/* Text Transformation */
+
+.tt-up,  .tt-upper,   .tt-uppercase  { text-transform: uppercase }
+.tt-low, .tt-lower,   .tt-lowercase  { text-transform: lowercase }
+.tt-cap, .tt-capital, .tt-capitalize { text-transform: capitalize }
+
+/* Letter Spacing */
+
+.ls-tightest { letter-spacing: -.03em }
+.ls-tighter  { letter-spacing: -.02em }
+.ls-tight    { letter-spacing: -.01em }
+.ls-normal   { letter-spacing: 0 }
+.ls-wide     { letter-spacing: .01em }
+.ls-wider    { letter-spacing: .02em }
+.ls-widest   { letter-spacing: .03em }
+
+/* Text Alignment */
+
+.ta-left    { text-align: left }
+.ta-center  { text-align: center }
+.ta-right   { text-align: right }
+.ta-justify { text-align: justify }
+
+/* Line Height */
+
+.lh-1   { line-height: 1 }
+.lh-115 { line-height: 1.15 }
+.lh-125 { line-height: 1.25 }
+.lh-135 { line-height: 1.35 }
+.lh-15  { line-height: 1.5 }
+.lh-175 { line-height: 1.75 }
+.lh-2   { line-height: 2 }
+.lh-25  { line-height: 2.5 }
+.lh-3   { line-height: 3 }
+
+/* Wrap & Hyphen */
+
+.ws-nowrap  { white-space: nowrap }
+.ow-break   { overflow-wrap: anywhere }
+.hyphens    { hyphens: auto }
+
+.fine-wrap {
+    overflow-wrap: anywhere;
+    word-break: normal;
+    hyphens: auto;
+    white-space: normal;
+    }
+
+/* Special Formatting */
+
+.sub, .sup {
+    position: relative;
+    font-size: .75em;
+    line-height: 1;
+    vertical-align: baseline;
+    }
+
+.sup { top: -0.5em; }
+.sub { bottom: -0.25em; }
+
+/* ===[ EFFECTS ]======================================================= */
+
+.op-100pc { opacity: 1.00 }
+.op-95pc  { opacity: 0.95 }
+.op-90pc  { opacity: 0.90 }
+.op-85pc  { opacity: 0.85 }
+.op-80pc  { opacity: 0.80 }
+.op-75pc  { opacity: 0.75 }
+.op-70pc  { opacity: 0.70 }
+.op-65pc  { opacity: 0.65 }
+.op-60pc  { opacity: 0.60 }
+.op-55pc  { opacity: 0.55 }
+.op-50pc  { opacity: 0.50 }
+.op-45pc  { opacity: 0.45 }
+.op-40pc  { opacity: 0.40 }
+.op-35pc  { opacity: 0.35 }
+.op-30pc  { opacity: 0.30 }
+.op-25pc  { opacity: 0.25 }
+.op-20pc  { opacity: 0.20 }
+.op-15pc  { opacity: 0.15 }
+.op-10pc  { opacity: 0.10 }
+.op-5pc   { opacity: 0.05 }
+.op-0pc   { opacity: 0 }
+
+/* ===[ LAYOUT ]======================================================== */
+
+
+
+
+
+
+
+
 
 
 
