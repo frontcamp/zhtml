@@ -102,15 +102,15 @@ UL, OL {
 
     UL LI, OL LI { margin: .5em 0; }
 
+.list-unstyled { list-style: none; padding-left: 0; }
+.list-inline { padding-left: 0; list-style: none; }
+.list-inline > LI { display: inline; margin-right: .5em; }
+
 DL { margin: 1em 0; }
 
     DL DT { font-weight: 600; }
 
     DL DD { margin: 0 0 .5em 0; }
-
-.list-unstyled { list-style: none; padding-left: 0; }
-.list-inline { padding-left: 0; list-style: none; }
-.list-inline > LI { display: inline; margin-right: .5em; }
 
 A, A:visited {
     color: var(--link-color);
@@ -182,7 +182,7 @@ TABLE {
     
     TABLE TH { text-align: left; }
 
-CODE, .code, PRE, KBD, SAMP { font-family: "Courier New", Courier, monospace; }
+CODE, .code, PRE, .pre, KBD, SAMP { font-family: "Courier New", Courier, monospace; }
 
 CODE, .code { white-space: normal; }
 
@@ -197,6 +197,17 @@ KBD {
     border-radius: .25em;
     padding: .1em .35em;
     }
+
+SUB, SUP,
+.sub, .sup {
+    position: relative;
+    font-size: .75em;
+    line-height: 1;
+    vertical-align: baseline;
+    }
+
+SUP, .sup { top: -0.5em; }
+SUB, .sub { bottom: -0.25em; }
 
 .hr, .divider {
     border: none;
@@ -258,6 +269,7 @@ KBD {
 .td-underline-overline {
     text-decoration-line: underline overline;
     text-decoration-skip-ink: auto;
+    text-underline-offset: .08em;
     }
 .td-none { text-decoration: none; }
 
@@ -308,19 +320,6 @@ KBD {
     hyphens: auto;
     white-space: normal;
     }
-
-/* Special Formatting */
-
-SUB, SUP,
-.sub, .sup {
-    position: relative;
-    font-size: .75em;
-    line-height: 1;
-    vertical-align: baseline;
-    }
-
-SUP, .sup { top: -0.5em; }
-SUB, .sub { bottom: -0.25em; }
 
 /* ===[ EFFECTS ]======================================================= */
 
