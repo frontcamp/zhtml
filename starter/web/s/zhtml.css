@@ -14,7 +14,7 @@ Author: Maksym Plaksin <maxim.plaksin@gmail.com>
  * TYPOGRAPHY
  *   .fs-* - font-size
  *   .fw-* - font-weight
- *   .fs-* - font-style (.fs-italic, .fs-oblique, .fs-normal)
+ *   .fs-italic, .fs-oblique, .fs-normal - font-style
  *   .td-* - text-decoration
  *   .tt-* - text-transform
  *   .ls-* - letter-spacing
@@ -73,9 +73,7 @@ BODY {
 
 H1, H2, H3, H4, H5, H6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-weight: bold;
     line-height: 1.25;
-    text-align: center;
     margin-block: 1em .5em;
     }
     
