@@ -1,0 +1,29 @@
+/* https://github.com/frontcamp/zhtml.git
+   v0.1.20250906-2040
+   License: MIT
+   Author: Maksym Plaksin <maxim.plaksin@gmail.com>
+*/
+
+HTML, BODY {
+    padding: 0;
+    margin: 0;
+    }
+
+HTML {
+    font-size: 100%;  /* Base font size: 100% = 16px; 112.5% = 18px; */
+    height: 100%;
+    box-sizing: border-box;
+    }
+
+*, *::before, *::after { box-sizing: inherit; }
+
+BODY {
+    color: black;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background: white;
+    min-height: 100%;
+    }
+
+
+

@@ -23,9 +23,9 @@ FILE STRUCTURE
 --------------
 
 
-/demo           - HTML demos (use files from /starter)
-/docs           - framework documentation
-/starter        - ready-to-copy files:
+/demo               - HTML demos (use files from /starter)
+/docs               - framework documentation
+/starter            - ready-to-copy files:
     /web                - static files
         /f              - fonts
             /open-sans  - Open Sans font (example)
@@ -38,9 +38,9 @@ FILE STRUCTURE
             zhtml.css   - CSS framework
             global.js   - global JavaScript template (example)
     index.html          - starter HTML template (example)
-changelog.txt   - version history
-license.txt     - MIT license
-readme.txt      - this file
+changelog.txt       - version history
+license.txt         - MIT license
+readme.txt          - this file
 
 
 QUICK START
