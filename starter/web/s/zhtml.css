@@ -31,14 +31,17 @@ Author: Maksym Plaksin <maxim.plaksin@gmail.com>
 
 :root {
     --html-font-size: 100%;  /* 100% = 16px; 112.5% = 18px; */
-    
-    --fs-h1: 2.00rem;
-    --fs-h2: 1.75rem;
-    --fs-h3: 1.50rem;
-    --fs-h4: 1.35rem;
-    --fs-h5: 1.25rem;
-    --fs-h6: 1.15rem;
-    
+
+    --h1-fs: 2.00rem;
+    --h2-fs: 1.75rem;
+    --h3-fs: 1.50rem;
+    --h4-fs: 1.35rem;
+    --h5-fs: 1.25rem;
+    --h6-fs: 1.15rem;
+
+    --hx-lh: 1.25;      /* headings line-height */
+    --hx-mb: 1em .5em;  /* headings margin top/bottom */
+  
     --link-color: #06f;
     --link-hover-color: #39f;
     
@@ -59,7 +62,7 @@ HTML {
     box-sizing: border-box;
     }
 
-*, *::before, *::after { box-sizing: inherit }
+*, *::before, *::after { box-sizing: inherit; }
 
 BODY {
     color: black;
@@ -73,18 +76,41 @@ BODY {
 
 H1, H2, H3, H4, H5, H6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    line-height: 1.25;
-    margin-block: 1em .5em;
+    font-weight: inherit;
+    line-height: var(--hx-lh);
+    margin-block: var(--hx-mb);
     }
     
-H1, .h1 { font-size: var(--fs-h1) }
-H2, .h2 { font-size: var(--fs-h2) }
-H3, .h3 { font-size: var(--fs-h3) }
-H4, .h4 { font-size: var(--fs-h4) }
-H5, .h5 { font-size: var(--fs-h5) }
-H6, .h6 { font-size: var(--fs-h6) }
+H1, .h1 { font-size: var(--h1-fs); }
+H2, .h2 { font-size: var(--h2-fs); }
+H3, .h3 { font-size: var(--h3-fs); }
+H4, .h4 { font-size: var(--h4-fs); }
+H5, .h5 { font-size: var(--h5-fs); }
+H6, .h6 { font-size: var(--h6-fs); }
 
-P { margin-block: 1em }
+P { margin-block: 1em; }
+
+.lead, P.lead {
+    font-size: 1.125em;
+    line-height: 1.6;
+    }
+
+UL, OL {
+    padding-left: 1.5em;
+    margin: 1em 0;
+    }
+
+    UL LI, OL LI { margin: .5em 0; }
+
+DL { margin: 1em 0; }
+
+    DL DT { font-weight: 600; }
+
+    DL DD { margin: 0 0 .5em 0; }
+
+.list-unstyled { list-style: none; padding-left: 0; }
+.list-inline { padding-left: 0; list-style: none; }
+.list-inline > LI { display: inline; margin-right: .5em; }
 
 A, A:visited {
     color: var(--link-color);
@@ -92,15 +118,84 @@ A, A:visited {
     }
 A:hover, A:focus {
     color: var(--link-hover-color);
-    outline: none;
     }
-a:focus-visible { outline: auto; }
+A:focus:not(:focus-visible) { outline: none; }
+A:focus-visible { outline: auto; }
 
-.code, .pre {
-    font-family: "Courier New", Courier, monospace;
-    white-space: pre-wrap;
+CITE { font-style: italic; }
+
+MARK { 
+    border-radius: .15em;
+    padding: 0 .1em;
+    }
+
+DEL  { text-decoration: line-through; }
+
+INS  { text-decoration: underline; }
+
+ABBR[title] {
+    text-decoration: underline dotted;
+    text-decoration-skip-ink: auto;
+    text-underline-offset: .08em;
+    cursor: help;
+    }
+
+BLOCKQUOTE {
+    border-left: .25rem solid currentColor;
+    padding-left: 1rem;
     margin: 1em 0;
+    }
+
+    BLOCKQUOTE > CITE {
+        font-size: .875em;
+        margin-top: .5em;
+        display: block;
+        opacity: .8;
+        }
+
+FIGURE { margin: 1em 0; }
+
+    FIGURE > FIGCAPTION {
+        font-size: .875em;
+        text-align: center;
+        margin-top: .5em;
+        opacity: .9;
+        }
+
+IMG, VIDEO, CANVAS, SVG {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    }
+
+TABLE {
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    TABLE TH,
+    TABLE TD { 
+        vertical-align: top;
+        padding: .5em;
+        }
+    
+    TABLE TH { text-align: left; }
+
+CODE, .code, PRE, KBD, SAMP { font-family: "Courier New", Courier, monospace; }
+
+CODE, .code { white-space: normal; }
+
+PRE, .pre {
+    white-space: pre-wrap;
+    margin: 1em 0; 
     overflow: auto;
+    }
+
+KBD {
+    border: 1px solid currentColor;
+    border-radius: .25em;
+    padding: .1em .35em;
     }
 
 .hr, .divider {
@@ -115,42 +210,42 @@ a:focus-visible { outline: auto; }
 
 /* Font Size */
 
-.fs-biggest  { font-size: 1.75em }
-.fs-bigger   { font-size: 1.5em }
-.fs-big      { font-size: 1.25em }
-.fs-biggy    { font-size: 1.125em }
+.fs-biggest  { font-size: 1.75em; }
+.fs-bigger   { font-size: 1.5em; }
+.fs-big      { font-size: 1.25em; }
+.fs-biggy    { font-size: 1.125em; }
 
-.fs-regular  { font-size: 1rem }
+.fs-regular  { font-size: 1rem; }
 
-.fs-smally   { font-size: .9em }
-.fs-small    { font-size: .875em }
-.fs-smaller  { font-size: .75em }
-.fs-smallest { font-size: .5em }
+.fs-smally   { font-size: .9em; }
+.fs-small    { font-size: .875em; }
+.fs-smaller  { font-size: .75em; }
+.fs-smallest { font-size: .5em; }
 
 /* Font Weight */
 
-.fw-100, .fw-thin                       { font-weight: 100 }
-.fw-200, .fw-extralight, .fw-ultralight { font-weight: 200 }
-.fw-300, .fw-light                      { font-weight: 300 }
-.fw-400, .fw-regular,    .fw-normal     { font-weight: 400 }
-.fw-500, .fw-medium                     { font-weight: 500 }
-.fw-600, .fw-semibold,   .fw-demibold   { font-weight: 600 }
-.fw-700, .fw-bold                       { font-weight: 700 }
-.fw-800, .fw-extrabold,  .fw-ultrabold  { font-weight: 800 }
-.fw-900, .fw-black,      .fw-heavy      { font-weight: 900 }
+.fw-100, .fw-thin                       { font-weight: 100; }
+.fw-200, .fw-extralight, .fw-ultralight { font-weight: 200; }
+.fw-300, .fw-light                      { font-weight: 300; }
+.fw-400, .fw-regular,    .fw-normal     { font-weight: 400; }
+.fw-500, .fw-medium                     { font-weight: 500; }
+.fw-600, .fw-semibold,   .fw-demibold   { font-weight: 600; }
+.fw-700, .fw-bold                       { font-weight: 700; }
+.fw-800, .fw-extrabold,  .fw-ultrabold  { font-weight: 800; }
+.fw-900, .fw-black,      .fw-heavy      { font-weight: 900; }
 
-.fw-lighter { font-weight: lighter }
-.fw-bolder  { font-weight: bolder }
+.fw-lighter { font-weight: lighter; }
+.fw-bolder  { font-weight: bolder; }
 
 /* Font Style */
 
-.fs-italic   { font-style: italic }
-.fs-oblique  { font-style: oblique }
-.fs-normal   { font-style: normal }
+.fs-italic   { font-style: italic; }
+.fs-oblique  { font-style: oblique; }
+.fs-normal   { font-style: normal; }
 
 /* Text Decoration */
 
-.td-strike, .td-strikethrough, .td-line-through { text-decoration: line-through }
+.td-strike, .td-strikethrough, .td-line-through { text-decoration: line-through; }
 .td-overline  {
     text-decoration-line: overline;
     text-decoration-skip-ink: auto;
@@ -164,48 +259,48 @@ a:focus-visible { outline: auto; }
     text-decoration-line: underline overline;
     text-decoration-skip-ink: auto;
     }
-.td-none { text-decoration: none }
+.td-none { text-decoration: none; }
 
 /* Text Transformation */
 
-.tt-up,  .tt-upper,   .tt-uppercase  { text-transform: uppercase }
-.tt-low, .tt-lower,   .tt-lowercase  { text-transform: lowercase }
-.tt-cap, .tt-capital, .tt-capitalize { text-transform: capitalize }
+.tt-up,  .tt-upper,   .tt-uppercase  { text-transform: uppercase; }
+.tt-low, .tt-lower,   .tt-lowercase  { text-transform: lowercase; }
+.tt-cap, .tt-capital, .tt-capitalize { text-transform: capitalize; }
 
 /* Letter Spacing */
 
-.ls-tightest { letter-spacing: -.03em }
-.ls-tighter  { letter-spacing: -.02em }
-.ls-tight    { letter-spacing: -.01em }
-.ls-normal   { letter-spacing: 0 }
-.ls-wide     { letter-spacing: .01em }
-.ls-wider    { letter-spacing: .02em }
-.ls-widest   { letter-spacing: .03em }
+.ls-tightest { letter-spacing: -.03em; }
+.ls-tighter  { letter-spacing: -.02em; }
+.ls-tight    { letter-spacing: -.01em; }
+.ls-normal   { letter-spacing: 0; }
+.ls-wide     { letter-spacing: .01em; }
+.ls-wider    { letter-spacing: .02em; }
+.ls-widest   { letter-spacing: .03em; }
 
 /* Text Alignment */
 
-.ta-left    { text-align: left }
-.ta-center  { text-align: center }
-.ta-right   { text-align: right }
-.ta-justify { text-align: justify }
+.ta-left    { text-align: left; }
+.ta-center  { text-align: center; }
+.ta-right   { text-align: right; }
+.ta-justify { text-align: justify; }
 
 /* Line Height */
 
-.lh-1   { line-height: 1 }
-.lh-115 { line-height: 1.15 }
-.lh-125 { line-height: 1.25 }
-.lh-135 { line-height: 1.35 }
-.lh-15  { line-height: 1.5 }
-.lh-175 { line-height: 1.75 }
-.lh-2   { line-height: 2 }
-.lh-25  { line-height: 2.5 }
-.lh-3   { line-height: 3 }
+.lh-1   { line-height: 1; }
+.lh-115 { line-height: 1.15; }
+.lh-125 { line-height: 1.25; }
+.lh-135 { line-height: 1.35; }
+.lh-15  { line-height: 1.5; }
+.lh-175 { line-height: 1.75; }
+.lh-2   { line-height: 2; }
+.lh-25  { line-height: 2.5; }
+.lh-3   { line-height: 3; }
 
 /* Wrap & Hyphen */
 
-.ws-nowrap  { white-space: nowrap }
-.ow-break   { overflow-wrap: anywhere }
-.hyphens    { hyphens: auto }
+.ws-nowrap  { white-space: nowrap; }
+.ow-break   { overflow-wrap: anywhere; }
+.hyphens    { hyphens: auto; }
 
 .fine-wrap {
     overflow-wrap: anywhere;
@@ -216,6 +311,7 @@ a:focus-visible { outline: auto; }
 
 /* Special Formatting */
 
+SUB, SUP,
 .sub, .sup {
     position: relative;
     font-size: .75em;
@@ -223,32 +319,32 @@ a:focus-visible { outline: auto; }
     vertical-align: baseline;
     }
 
-.sup { top: -0.5em; }
-.sub { bottom: -0.25em; }
+SUP, .sup { top: -0.5em; }
+SUB, .sub { bottom: -0.25em; }
 
 /* ===[ EFFECTS ]======================================================= */
 
-.op-100pc { opacity: 1.00 }
-.op-95pc  { opacity: 0.95 }
-.op-90pc  { opacity: 0.90 }
-.op-85pc  { opacity: 0.85 }
-.op-80pc  { opacity: 0.80 }
-.op-75pc  { opacity: 0.75 }
-.op-70pc  { opacity: 0.70 }
-.op-65pc  { opacity: 0.65 }
-.op-60pc  { opacity: 0.60 }
-.op-55pc  { opacity: 0.55 }
-.op-50pc  { opacity: 0.50 }
-.op-45pc  { opacity: 0.45 }
-.op-40pc  { opacity: 0.40 }
-.op-35pc  { opacity: 0.35 }
-.op-30pc  { opacity: 0.30 }
-.op-25pc  { opacity: 0.25 }
-.op-20pc  { opacity: 0.20 }
-.op-15pc  { opacity: 0.15 }
-.op-10pc  { opacity: 0.10 }
-.op-5pc   { opacity: 0.05 }
-.op-0pc   { opacity: 0 }
+.op-100pc { opacity: 1.00; }
+.op-95pc  { opacity: 0.95; }
+.op-90pc  { opacity: 0.90; }
+.op-85pc  { opacity: 0.85; }
+.op-80pc  { opacity: 0.80; }
+.op-75pc  { opacity: 0.75; }
+.op-70pc  { opacity: 0.70; }
+.op-65pc  { opacity: 0.65; }
+.op-60pc  { opacity: 0.60; }
+.op-55pc  { opacity: 0.55; }
+.op-50pc  { opacity: 0.50; }
+.op-45pc  { opacity: 0.45; }
+.op-40pc  { opacity: 0.40; }
+.op-35pc  { opacity: 0.35; }
+.op-30pc  { opacity: 0.30; }
+.op-25pc  { opacity: 0.25; }
+.op-20pc  { opacity: 0.20; }
+.op-15pc  { opacity: 0.15; }
+.op-10pc  { opacity: 0.10; }
+.op-5pc   { opacity: 0.05; }
+.op-0pc   { opacity: 0; }
 
 /* ===[ LAYOUT ]======================================================== */
 

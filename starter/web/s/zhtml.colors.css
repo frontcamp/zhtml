@@ -4,174 +4,174 @@ Based on: CSS Colors Level 4
 Doc: https://developer.mozilla.org/en-US/docs/Web/CSS/named-color
 */
 
-.cl-current { color: currentColor }
-.bd-current { border-color: currentColor }
-.bg-current { background-color: currentColor }
+.cl-current { color: currentColor; }
+.bd-current { border-color: currentColor; }
+.bg-current { background-color: currentColor; }
 
-.cl-inherit { color: inherit }
-.bd-inherit { border-color: inherit }
-.bg-inherit { background-color: inherit }
+.cl-inherit { color: inherit; }
+.bd-inherit { border-color: inherit; }
+.bg-inherit { background-color: inherit; }
 
-.cl-transparent { color: transparent }
-.bd-transparent { border-color: transparent }
-.bg-transparent { background-color: transparent }
+.cl-transparent { color: transparent; }
+.bd-transparent { border-color: transparent; }
+.bg-transparent { background-color: transparent; }
 
-.bd-common { border: 1px solid currentColor }
+.bd-common { border: 1px solid currentColor; }
 
 /* Example: <div class="bd-common bd-red">...</div> */
 
-.cl-color { color: var(--c) }
-.bd-color { border-color: var(--c) }
-.bg-color { background: var(--c) }
+.cl-color { color: var(--c); }
+.bd-color { border-color: var(--c); }
+.bg-color { background: var(--c); }
 
 /* Example: <div class="bd-color bg-color" style="--c:tomato">...</div> */
 
-.cl-aliceblue { color: aliceblue } .bd-aliceblue { border-color: aliceblue } .bg-aliceblue { background-color: aliceblue }
-.cl-antiquewhite { color: antiquewhite } .bd-antiquewhite { border-color: antiquewhite } .bg-antiquewhite { background-color: antiquewhite }
-.cl-aqua { color: aqua } .bd-aqua { border-color: aqua } .bg-aqua { background-color: aqua }
-.cl-aquamarine { color: aquamarine } .bd-aquamarine { border-color: aquamarine } .bg-aquamarine { background-color: aquamarine }
-.cl-azure { color: azure } .bd-azure { border-color: azure } .bg-azure { background-color: azure }
-.cl-beige { color: beige } .bd-beige { border-color: beige } .bg-beige { background-color: beige }
-.cl-bisque { color: bisque } .bd-bisque { border-color: bisque } .bg-bisque { background-color: bisque }
-.cl-black { color: black } .bd-black { border-color: black } .bg-black { background-color: black }
-.cl-blanchedalmond { color: blanchedalmond } .bd-blanchedalmond { border-color: blanchedalmond } .bg-blanchedalmond { background-color: blanchedalmond }
-.cl-blue { color: blue } .bd-blue { border-color: blue } .bg-blue { background-color: blue }
-.cl-blueviolet { color: blueviolet } .bd-blueviolet { border-color: blueviolet } .bg-blueviolet { background-color: blueviolet }
-.cl-brown { color: brown } .bd-brown { border-color: brown } .bg-brown { background-color: brown }
-.cl-burlywood { color: burlywood } .bd-burlywood { border-color: burlywood } .bg-burlywood { background-color: burlywood }
-.cl-cadetblue { color: cadetblue } .bd-cadetblue { border-color: cadetblue } .bg-cadetblue { background-color: cadetblue }
-.cl-chartreuse { color: chartreuse } .bd-chartreuse { border-color: chartreuse } .bg-chartreuse { background-color: chartreuse }
-.cl-chocolate { color: chocolate } .bd-chocolate { border-color: chocolate } .bg-chocolate { background-color: chocolate }
-.cl-coral { color: coral } .bd-coral { border-color: coral } .bg-coral { background-color: coral }
-.cl-cornflowerblue { color: cornflowerblue } .bd-cornflowerblue { border-color: cornflowerblue } .bg-cornflowerblue { background-color: cornflowerblue }
-.cl-cornsilk { color: cornsilk } .bd-cornsilk { border-color: cornsilk } .bg-cornsilk { background-color: cornsilk }
-.cl-crimson { color: crimson } .bd-crimson { border-color: crimson } .bg-crimson { background-color: crimson }
-.cl-cyan { color: cyan } .bd-cyan { border-color: cyan } .bg-cyan { background-color: cyan }
-.cl-darkblue { color: darkblue } .bd-darkblue { border-color: darkblue } .bg-darkblue { background-color: darkblue }
-.cl-darkcyan { color: darkcyan } .bd-darkcyan { border-color: darkcyan } .bg-darkcyan { background-color: darkcyan }
-.cl-darkgoldenrod { color: darkgoldenrod } .bd-darkgoldenrod { border-color: darkgoldenrod } .bg-darkgoldenrod { background-color: darkgoldenrod }
-.cl-darkgray { color: darkgray } .bd-darkgray { border-color: darkgray } .bg-darkgray { background-color: darkgray }
-.cl-darkgreen { color: darkgreen } .bd-darkgreen { border-color: darkgreen } .bg-darkgreen { background-color: darkgreen }
-.cl-darkgrey { color: darkgrey } .bd-darkgrey { border-color: darkgrey } .bg-darkgrey { background-color: darkgrey }
-.cl-darkkhaki { color: darkkhaki } .bd-darkkhaki { border-color: darkkhaki } .bg-darkkhaki { background-color: darkkhaki }
-.cl-darkmagenta { color: darkmagenta } .bd-darkmagenta { border-color: darkmagenta } .bg-darkmagenta { background-color: darkmagenta }
-.cl-darkolivegreen { color: darkolivegreen } .bd-darkolivegreen { border-color: darkolivegreen } .bg-darkolivegreen { background-color: darkolivegreen }
-.cl-darkorange { color: darkorange } .bd-darkorange { border-color: darkorange } .bg-darkorange { background-color: darkorange }
-.cl-darkorchid { color: darkorchid } .bd-darkorchid { border-color: darkorchid } .bg-darkorchid { background-color: darkorchid }
-.cl-darkred { color: darkred } .bd-darkred { border-color: darkred } .bg-darkred { background-color: darkred }
-.cl-darksalmon { color: darksalmon } .bd-darksalmon { border-color: darksalmon } .bg-darksalmon { background-color: darksalmon }
-.cl-darkseagreen { color: darkseagreen } .bd-darkseagreen { border-color: darkseagreen } .bg-darkseagreen { background-color: darkseagreen }
-.cl-darkslateblue { color: darkslateblue } .bd-darkslateblue { border-color: darkslateblue } .bg-darkslateblue { background-color: darkslateblue }
-.cl-darkslategray { color: darkslategray } .bd-darkslategray { border-color: darkslategray } .bg-darkslategray { background-color: darkslategray }
-.cl-darkslategrey { color: darkslategrey } .bd-darkslategrey { border-color: darkslategrey } .bg-darkslategrey { background-color: darkslategrey }
-.cl-darkturquoise { color: darkturquoise } .bd-darkturquoise { border-color: darkturquoise } .bg-darkturquoise { background-color: darkturquoise }
-.cl-darkviolet { color: darkviolet } .bd-darkviolet { border-color: darkviolet } .bg-darkviolet { background-color: darkviolet }
-.cl-deeppink { color: deeppink } .bd-deeppink { border-color: deeppink } .bg-deeppink { background-color: deeppink }
-.cl-deepskyblue { color: deepskyblue } .bd-deepskyblue { border-color: deepskyblue } .bg-deepskyblue { background-color: deepskyblue }
-.cl-dimgray { color: dimgray } .bd-dimgray { border-color: dimgray } .bg-dimgray { background-color: dimgray }
-.cl-dimgrey { color: dimgrey } .bd-dimgrey { border-color: dimgrey } .bg-dimgrey { background-color: dimgrey }
-.cl-dodgerblue { color: dodgerblue } .bd-dodgerblue { border-color: dodgerblue } .bg-dodgerblue { background-color: dodgerblue }
-.cl-firebrick { color: firebrick } .bd-firebrick { border-color: firebrick } .bg-firebrick { background-color: firebrick }
-.cl-floralwhite { color: floralwhite } .bd-floralwhite { border-color: floralwhite } .bg-floralwhite { background-color: floralwhite }
-.cl-forestgreen { color: forestgreen } .bd-forestgreen { border-color: forestgreen } .bg-forestgreen { background-color: forestgreen }
-.cl-fuchsia { color: fuchsia } .bd-fuchsia { border-color: fuchsia } .bg-fuchsia { background-color: fuchsia }
-.cl-gainsboro { color: gainsboro } .bd-gainsboro { border-color: gainsboro } .bg-gainsboro { background-color: gainsboro }
-.cl-ghostwhite { color: ghostwhite } .bd-ghostwhite { border-color: ghostwhite } .bg-ghostwhite { background-color: ghostwhite }
-.cl-gold { color: gold } .bd-gold { border-color: gold } .bg-gold { background-color: gold }
-.cl-goldenrod { color: goldenrod } .bd-goldenrod { border-color: goldenrod } .bg-goldenrod { background-color: goldenrod }
-.cl-gray { color: gray } .bd-gray { border-color: gray } .bg-gray { background-color: gray }
-.cl-green { color: green } .bd-green { border-color: green } .bg-green { background-color: green }
-.cl-greenyellow { color: greenyellow } .bd-greenyellow { border-color: greenyellow } .bg-greenyellow { background-color: greenyellow }
-.cl-grey { color: grey } .bd-grey { border-color: grey } .bg-grey { background-color: grey }
-.cl-honeydew { color: honeydew } .bd-honeydew { border-color: honeydew } .bg-honeydew { background-color: honeydew }
-.cl-hotpink { color: hotpink } .bd-hotpink { border-color: hotpink } .bg-hotpink { background-color: hotpink }
-.cl-indianred { color: indianred } .bd-indianred { border-color: indianred } .bg-indianred { background-color: indianred }
-.cl-indigo { color: indigo } .bd-indigo { border-color: indigo } .bg-indigo { background-color: indigo }
-.cl-ivory { color: ivory } .bd-ivory { border-color: ivory } .bg-ivory { background-color: ivory }
-.cl-khaki { color: khaki } .bd-khaki { border-color: khaki } .bg-khaki { background-color: khaki }
-.cl-lavender { color: lavender } .bd-lavender { border-color: lavender } .bg-lavender { background-color: lavender }
-.cl-lavenderblush { color: lavenderblush } .bd-lavenderblush { border-color: lavenderblush } .bg-lavenderblush { background-color: lavenderblush }
-.cl-lawngreen { color: lawngreen } .bd-lawngreen { border-color: lawngreen } .bg-lawngreen { background-color: lawngreen }
-.cl-lemonchiffon { color: lemonchiffon } .bd-lemonchiffon { border-color: lemonchiffon } .bg-lemonchiffon { background-color: lemonchiffon }
-.cl-lightblue { color: lightblue } .bd-lightblue { border-color: lightblue } .bg-lightblue { background-color: lightblue }
-.cl-lightcoral { color: lightcoral } .bd-lightcoral { border-color: lightcoral } .bg-lightcoral { background-color: lightcoral }
-.cl-lightcyan { color: lightcyan } .bd-lightcyan { border-color: lightcyan } .bg-lightcyan { background-color: lightcyan }
-.cl-lightgoldenrodyellow { color: lightgoldenrodyellow } .bd-lightgoldenrodyellow { border-color: lightgoldenrodyellow } .bg-lightgoldenrodyellow { background-color: lightgoldenrodyellow }
-.cl-lightgray { color: lightgray } .bd-lightgray { border-color: lightgray } .bg-lightgray { background-color: lightgray }
-.cl-lightgreen { color: lightgreen } .bd-lightgreen { border-color: lightgreen } .bg-lightgreen { background-color: lightgreen }
-.cl-lightgrey { color: lightgrey } .bd-lightgrey { border-color: lightgrey } .bg-lightgrey { background-color: lightgrey }
-.cl-lightpink { color: lightpink } .bd-lightpink { border-color: lightpink } .bg-lightpink { background-color: lightpink }
-.cl-lightsalmon { color: lightsalmon } .bd-lightsalmon { border-color: lightsalmon } .bg-lightsalmon { background-color: lightsalmon }
-.cl-lightseagreen { color: lightseagreen } .bd-lightseagreen { border-color: lightseagreen } .bg-lightseagreen { background-color: lightseagreen }
-.cl-lightskyblue { color: lightskyblue } .bd-lightskyblue { border-color: lightskyblue } .bg-lightskyblue { background-color: lightskyblue }
-.cl-lightslategray { color: lightslategray } .bd-lightslategray { border-color: lightslategray } .bg-lightslategray { background-color: lightslategray }
-.cl-lightslategrey { color: lightslategrey } .bd-lightslategrey { border-color: lightslategrey } .bg-lightslategrey { background-color: lightslategrey }
-.cl-lightsteelblue { color: lightsteelblue } .bd-lightsteelblue { border-color: lightsteelblue } .bg-lightsteelblue { background-color: lightsteelblue }
-.cl-lightyellow { color: lightyellow } .bd-lightyellow { border-color: lightyellow } .bg-lightyellow { background-color: lightyellow }
-.cl-lime { color: lime } .bd-lime { border-color: lime } .bg-lime { background-color: lime }
-.cl-limegreen { color: limegreen } .bd-limegreen { border-color: limegreen } .bg-limegreen { background-color: limegreen }
-.cl-linen { color: linen } .bd-linen { border-color: linen } .bg-linen { background-color: linen }
-.cl-magenta { color: magenta } .bd-magenta { border-color: magenta } .bg-magenta { background-color: magenta }
-.cl-maroon { color: maroon } .bd-maroon { border-color: maroon } .bg-maroon { background-color: maroon }
-.cl-mediumaquamarine { color: mediumaquamarine } .bd-mediumaquamarine { border-color: mediumaquamarine } .bg-mediumaquamarine { background-color: mediumaquamarine }
-.cl-mediumblue { color: mediumblue } .bd-mediumblue { border-color: mediumblue } .bg-mediumblue { background-color: mediumblue }
-.cl-mediumorchid { color: mediumorchid } .bd-mediumorchid { border-color: mediumorchid } .bg-mediumorchid { background-color: mediumorchid }
-.cl-mediumpurple { color: mediumpurple } .bd-mediumpurple { border-color: mediumpurple } .bg-mediumpurple { background-color: mediumpurple }
-.cl-mediumseagreen { color: mediumseagreen } .bd-mediumseagreen { border-color: mediumseagreen } .bg-mediumseagreen { background-color: mediumseagreen }
-.cl-mediumslateblue { color: mediumslateblue } .bd-mediumslateblue { border-color: mediumslateblue } .bg-mediumslateblue { background-color: mediumslateblue }
-.cl-mediumspringgreen { color: mediumspringgreen } .bd-mediumspringgreen { border-color: mediumspringgreen } .bg-mediumspringgreen { background-color: mediumspringgreen }
-.cl-mediumturquoise { color: mediumturquoise } .bd-mediumturquoise { border-color: mediumturquoise } .bg-mediumturquoise { background-color: mediumturquoise }
-.cl-mediumvioletred { color: mediumvioletred } .bd-mediumvioletred { border-color: mediumvioletred } .bg-mediumvioletred { background-color: mediumvioletred }
-.cl-midnightblue { color: midnightblue } .bd-midnightblue { border-color: midnightblue } .bg-midnightblue { background-color: midnightblue }
-.cl-mintcream { color: mintcream } .bd-mintcream { border-color: mintcream } .bg-mintcream { background-color: mintcream }
-.cl-mistyrose { color: mistyrose } .bd-mistyrose { border-color: mistyrose } .bg-mistyrose { background-color: mistyrose }
-.cl-moccasin { color: moccasin } .bd-moccasin { border-color: moccasin } .bg-moccasin { background-color: moccasin }
-.cl-navajowhite { color: navajowhite } .bd-navajowhite { border-color: navajowhite } .bg-navajowhite { background-color: navajowhite }
-.cl-navy { color: navy } .bd-navy { border-color: navy } .bg-navy { background-color: navy }
-.cl-oldlace { color: oldlace } .bd-oldlace { border-color: oldlace } .bg-oldlace { background-color: oldlace }
-.cl-olive { color: olive } .bd-olive { border-color: olive } .bg-olive { background-color: olive }
-.cl-olivedrab { color: olivedrab } .bd-olivedrab { border-color: olivedrab } .bg-olivedrab { background-color: olivedrab }
-.cl-orange { color: orange } .bd-orange { border-color: orange } .bg-orange { background-color: orange }
-.cl-orangered { color: orangered } .bd-orangered { border-color: orangered } .bg-orangered { background-color: orangered }
-.cl-orchid { color: orchid } .bd-orchid { border-color: orchid } .bg-orchid { background-color: orchid }
-.cl-palegoldenrod { color: palegoldenrod } .bd-palegoldenrod { border-color: palegoldenrod } .bg-palegoldenrod { background-color: palegoldenrod }
-.cl-palegreen { color: palegreen } .bd-palegreen { border-color: palegreen } .bg-palegreen { background-color: palegreen }
-.cl-paleturquoise { color: paleturquoise } .bd-paleturquoise { border-color: paleturquoise } .bg-paleturquoise { background-color: paleturquoise }
-.cl-palevioletred { color: palevioletred } .bd-palevioletred { border-color: palevioletred } .bg-palevioletred { background-color: palevioletred }
-.cl-papayawhip { color: papayawhip } .bd-papayawhip { border-color: papayawhip } .bg-papayawhip { background-color: papayawhip }
-.cl-peachpuff { color: peachpuff } .bd-peachpuff { border-color: peachpuff } .bg-peachpuff { background-color: peachpuff }
-.cl-peru { color: peru } .bd-peru { border-color: peru } .bg-peru { background-color: peru }
-.cl-pink { color: pink } .bd-pink { border-color: pink } .bg-pink { background-color: pink }
-.cl-plum { color: plum } .bd-plum { border-color: plum } .bg-plum { background-color: plum }
-.cl-powderblue { color: powderblue } .bd-powderblue { border-color: powderblue } .bg-powderblue { background-color: powderblue }
-.cl-purple { color: purple } .bd-purple { border-color: purple } .bg-purple { background-color: purple }
-.cl-rebeccapurple { color: rebeccapurple }  .bd-rebeccapurple { border-color: rebeccapurple } .bg-rebeccapurple { background-color: rebeccapurple }
-.cl-red { color: red } .bd-red { border-color: red } .bg-red { background-color: red }
-.cl-rosybrown { color: rosybrown } .bd-rosybrown { border-color: rosybrown } .bg-rosybrown { background-color: rosybrown }
-.cl-royalblue { color: royalblue } .bd-royalblue { border-color: royalblue } .bg-royalblue { background-color: royalblue }
-.cl-saddlebrown { color: saddlebrown } .bd-saddlebrown { border-color: saddlebrown } .bg-saddlebrown { background-color: saddlebrown }
-.cl-salmon { color: salmon } .bd-salmon { border-color: salmon } .bg-salmon { background-color: salmon }
-.cl-sandybrown { color: sandybrown } .bd-sandybrown { border-color: sandybrown } .bg-sandybrown { background-color: sandybrown }
-.cl-seagreen { color: seagreen } .bd-seagreen { border-color: seagreen } .bg-seagreen { background-color: seagreen }
-.cl-seashell { color: seashell } .bd-seashell { border-color: seashell } .bg-seashell { background-color: seashell }
-.cl-sienna { color: sienna } .bd-sienna { border-color: sienna } .bg-sienna { background-color: sienna }
-.cl-silver { color: silver } .bd-silver { border-color: silver } .bg-silver { background-color: silver }
-.cl-skyblue { color: skyblue } .bd-skyblue { border-color: skyblue } .bg-skyblue { background-color: skyblue }
-.cl-slateblue { color: slateblue } .bd-slateblue { border-color: slateblue } .bg-slateblue { background-color: slateblue }
-.cl-slategray { color: slategray } .bd-slategray { border-color: slategray } .bg-slategray { background-color: slategray }
-.cl-slategrey { color: slategrey } .bd-slategrey { border-color: slategrey } .bg-slategrey { background-color: slategrey }
-.cl-snow { color: snow } .bd-snow { border-color: snow } .bg-snow { background-color: snow }
-.cl-springgreen { color: springgreen } .bd-springgreen { border-color: springgreen } .bg-springgreen { background-color: springgreen }
-.cl-steelblue { color: steelblue } .bd-steelblue { border-color: steelblue } .bg-steelblue { background-color: steelblue }
-.cl-tan { color: tan } .bd-tan { border-color: tan } .bg-tan { background-color: tan }
-.cl-teal { color: teal } .bd-teal { border-color: teal } .bg-teal { background-color: teal }
-.cl-thistle { color: thistle } .bd-thistle { border-color: thistle } .bg-thistle { background-color: thistle }
-.cl-tomato { color: tomato } .bd-tomato { border-color: tomato } .bg-tomato { background-color: tomato }
-.cl-turquoise { color: turquoise } .bd-turquoise { border-color: turquoise } .bg-turquoise { background-color: turquoise }
-.cl-violet { color: violet } .bd-violet { border-color: violet } .bg-violet { background-color: violet }
-.cl-wheat { color: wheat } .bd-wheat { border-color: wheat } .bg-wheat { background-color: wheat }
-.cl-white { color: white } .bd-white { border-color: white } .bg-white { background-color: white }
-.cl-whitesmoke { color: whitesmoke } .bd-whitesmoke { border-color: whitesmoke } .bg-whitesmoke { background-color: whitesmoke }
-.cl-yellow { color: yellow } .bd-yellow { border-color: yellow } .bg-yellow { background-color: yellow }
-.cl-yellowgreen { color: yellowgreen } .bd-yellowgreen { border-color: yellowgreen } .bg-yellowgreen { background-color: yellowgreen }
+.cl-aliceblue { color: aliceblue; } .bd-aliceblue { border-color: aliceblue; } .bg-aliceblue { background-color: aliceblue; }
+.cl-antiquewhite { color: antiquewhite; } .bd-antiquewhite { border-color: antiquewhite; } .bg-antiquewhite { background-color: antiquewhite; }
+.cl-aqua { color: aqua; } .bd-aqua { border-color: aqua; } .bg-aqua { background-color: aqua; }
+.cl-aquamarine { color: aquamarine; } .bd-aquamarine { border-color: aquamarine; } .bg-aquamarine { background-color: aquamarine; }
+.cl-azure { color: azure; } .bd-azure { border-color: azure; } .bg-azure { background-color: azure; }
+.cl-beige { color: beige; } .bd-beige { border-color: beige; } .bg-beige { background-color: beige; }
+.cl-bisque { color: bisque; } .bd-bisque { border-color: bisque; } .bg-bisque { background-color: bisque; }
+.cl-black { color: black; } .bd-black { border-color: black; } .bg-black { background-color: black; }
+.cl-blanchedalmond { color: blanchedalmond; } .bd-blanchedalmond { border-color: blanchedalmond; } .bg-blanchedalmond { background-color: blanchedalmond; }
+.cl-blue { color: blue; } .bd-blue { border-color: blue; } .bg-blue { background-color: blue; }
+.cl-blueviolet { color: blueviolet; } .bd-blueviolet { border-color: blueviolet; } .bg-blueviolet { background-color: blueviolet; }
+.cl-brown { color: brown; } .bd-brown { border-color: brown; } .bg-brown { background-color: brown; }
+.cl-burlywood { color: burlywood; } .bd-burlywood { border-color: burlywood; } .bg-burlywood { background-color: burlywood; }
+.cl-cadetblue { color: cadetblue; } .bd-cadetblue { border-color: cadetblue; } .bg-cadetblue { background-color: cadetblue; }
+.cl-chartreuse { color: chartreuse; } .bd-chartreuse { border-color: chartreuse; } .bg-chartreuse { background-color: chartreuse; }
+.cl-chocolate { color: chocolate; } .bd-chocolate { border-color: chocolate; } .bg-chocolate { background-color: chocolate; }
+.cl-coral { color: coral; } .bd-coral { border-color: coral; } .bg-coral { background-color: coral; }
+.cl-cornflowerblue { color: cornflowerblue; } .bd-cornflowerblue { border-color: cornflowerblue; } .bg-cornflowerblue { background-color: cornflowerblue; }
+.cl-cornsilk { color: cornsilk; } .bd-cornsilk { border-color: cornsilk; } .bg-cornsilk { background-color: cornsilk; }
+.cl-crimson { color: crimson; } .bd-crimson { border-color: crimson; } .bg-crimson { background-color: crimson; }
+.cl-cyan { color: cyan; } .bd-cyan { border-color: cyan; } .bg-cyan { background-color: cyan; }
+.cl-darkblue { color: darkblue; } .bd-darkblue { border-color: darkblue; } .bg-darkblue { background-color: darkblue; }
+.cl-darkcyan { color: darkcyan; } .bd-darkcyan { border-color: darkcyan; } .bg-darkcyan { background-color: darkcyan; }
+.cl-darkgoldenrod { color: darkgoldenrod; } .bd-darkgoldenrod { border-color: darkgoldenrod; } .bg-darkgoldenrod { background-color: darkgoldenrod; }
+.cl-darkgray { color: darkgray; } .bd-darkgray { border-color: darkgray; } .bg-darkgray { background-color: darkgray; }
+.cl-darkgreen { color: darkgreen; } .bd-darkgreen { border-color: darkgreen; } .bg-darkgreen { background-color: darkgreen; }
+.cl-darkgrey { color: darkgrey; } .bd-darkgrey { border-color: darkgrey; } .bg-darkgrey { background-color: darkgrey; }
+.cl-darkkhaki { color: darkkhaki; } .bd-darkkhaki { border-color: darkkhaki; } .bg-darkkhaki { background-color: darkkhaki; }
+.cl-darkmagenta { color: darkmagenta; } .bd-darkmagenta { border-color: darkmagenta; } .bg-darkmagenta { background-color: darkmagenta; }
+.cl-darkolivegreen { color: darkolivegreen; } .bd-darkolivegreen { border-color: darkolivegreen; } .bg-darkolivegreen { background-color: darkolivegreen; }
+.cl-darkorange { color: darkorange; } .bd-darkorange { border-color: darkorange; } .bg-darkorange { background-color: darkorange; }
+.cl-darkorchid { color: darkorchid; } .bd-darkorchid { border-color: darkorchid; } .bg-darkorchid { background-color: darkorchid; }
+.cl-darkred { color: darkred; } .bd-darkred { border-color: darkred; } .bg-darkred { background-color: darkred; }
+.cl-darksalmon { color: darksalmon; } .bd-darksalmon { border-color: darksalmon; } .bg-darksalmon { background-color: darksalmon; }
+.cl-darkseagreen { color: darkseagreen; } .bd-darkseagreen { border-color: darkseagreen; } .bg-darkseagreen { background-color: darkseagreen; }
+.cl-darkslateblue { color: darkslateblue; } .bd-darkslateblue { border-color: darkslateblue; } .bg-darkslateblue { background-color: darkslateblue; }
+.cl-darkslategray { color: darkslategray; } .bd-darkslategray { border-color: darkslategray; } .bg-darkslategray { background-color: darkslategray; }
+.cl-darkslategrey { color: darkslategrey; } .bd-darkslategrey { border-color: darkslategrey; } .bg-darkslategrey { background-color: darkslategrey; }
+.cl-darkturquoise { color: darkturquoise; } .bd-darkturquoise { border-color: darkturquoise; } .bg-darkturquoise { background-color: darkturquoise; }
+.cl-darkviolet { color: darkviolet; } .bd-darkviolet { border-color: darkviolet; } .bg-darkviolet { background-color: darkviolet; }
+.cl-deeppink { color: deeppink; } .bd-deeppink { border-color: deeppink; } .bg-deeppink { background-color: deeppink; }
+.cl-deepskyblue { color: deepskyblue; } .bd-deepskyblue { border-color: deepskyblue; } .bg-deepskyblue { background-color: deepskyblue; }
+.cl-dimgray { color: dimgray; } .bd-dimgray { border-color: dimgray; } .bg-dimgray { background-color: dimgray; }
+.cl-dimgrey { color: dimgrey; } .bd-dimgrey { border-color: dimgrey; } .bg-dimgrey { background-color: dimgrey; }
+.cl-dodgerblue { color: dodgerblue; } .bd-dodgerblue { border-color: dodgerblue; } .bg-dodgerblue { background-color: dodgerblue; }
+.cl-firebrick { color: firebrick; } .bd-firebrick { border-color: firebrick; } .bg-firebrick { background-color: firebrick; }
+.cl-floralwhite { color: floralwhite; } .bd-floralwhite { border-color: floralwhite; } .bg-floralwhite { background-color: floralwhite; }
+.cl-forestgreen { color: forestgreen; } .bd-forestgreen { border-color: forestgreen; } .bg-forestgreen { background-color: forestgreen; }
+.cl-fuchsia { color: fuchsia; } .bd-fuchsia { border-color: fuchsia; } .bg-fuchsia { background-color: fuchsia; }
+.cl-gainsboro { color: gainsboro; } .bd-gainsboro { border-color: gainsboro; } .bg-gainsboro { background-color: gainsboro; }
+.cl-ghostwhite { color: ghostwhite; } .bd-ghostwhite { border-color: ghostwhite; } .bg-ghostwhite { background-color: ghostwhite; }
+.cl-gold { color: gold; } .bd-gold { border-color: gold; } .bg-gold { background-color: gold; }
+.cl-goldenrod { color: goldenrod; } .bd-goldenrod { border-color: goldenrod; } .bg-goldenrod { background-color: goldenrod; }
+.cl-gray { color: gray; } .bd-gray { border-color: gray; } .bg-gray { background-color: gray; }
+.cl-green { color: green; } .bd-green { border-color: green; } .bg-green { background-color: green; }
+.cl-greenyellow { color: greenyellow; } .bd-greenyellow { border-color: greenyellow; } .bg-greenyellow { background-color: greenyellow; }
+.cl-grey { color: grey; } .bd-grey { border-color: grey; } .bg-grey { background-color: grey; }
+.cl-honeydew { color: honeydew; } .bd-honeydew { border-color: honeydew; } .bg-honeydew { background-color: honeydew; }
+.cl-hotpink { color: hotpink; } .bd-hotpink { border-color: hotpink; } .bg-hotpink { background-color: hotpink; }
+.cl-indianred { color: indianred; } .bd-indianred { border-color: indianred; } .bg-indianred { background-color: indianred; }
+.cl-indigo { color: indigo; } .bd-indigo { border-color: indigo; } .bg-indigo { background-color: indigo; }
+.cl-ivory { color: ivory; } .bd-ivory { border-color: ivory; } .bg-ivory { background-color: ivory; }
+.cl-khaki { color: khaki; } .bd-khaki { border-color: khaki; } .bg-khaki { background-color: khaki; }
+.cl-lavender { color: lavender; } .bd-lavender { border-color: lavender; } .bg-lavender { background-color: lavender; }
+.cl-lavenderblush { color: lavenderblush; } .bd-lavenderblush { border-color: lavenderblush; } .bg-lavenderblush { background-color: lavenderblush; }
+.cl-lawngreen { color: lawngreen; } .bd-lawngreen { border-color: lawngreen; } .bg-lawngreen { background-color: lawngreen; }
+.cl-lemonchiffon { color: lemonchiffon; } .bd-lemonchiffon { border-color: lemonchiffon; } .bg-lemonchiffon { background-color: lemonchiffon; }
+.cl-lightblue { color: lightblue; } .bd-lightblue { border-color: lightblue; } .bg-lightblue { background-color: lightblue; }
+.cl-lightcoral { color: lightcoral; } .bd-lightcoral { border-color: lightcoral; } .bg-lightcoral { background-color: lightcoral; }
+.cl-lightcyan { color: lightcyan; } .bd-lightcyan { border-color: lightcyan; } .bg-lightcyan { background-color: lightcyan; }
+.cl-lightgoldenrodyellow { color: lightgoldenrodyellow; } .bd-lightgoldenrodyellow { border-color: lightgoldenrodyellow; } .bg-lightgoldenrodyellow { background-color: lightgoldenrodyellow; }
+.cl-lightgray { color: lightgray; } .bd-lightgray { border-color: lightgray; } .bg-lightgray { background-color: lightgray; }
+.cl-lightgreen { color: lightgreen; } .bd-lightgreen { border-color: lightgreen; } .bg-lightgreen { background-color: lightgreen; }
+.cl-lightgrey { color: lightgrey; } .bd-lightgrey { border-color: lightgrey; } .bg-lightgrey { background-color: lightgrey; }
+.cl-lightpink { color: lightpink; } .bd-lightpink { border-color: lightpink; } .bg-lightpink { background-color: lightpink; }
+.cl-lightsalmon { color: lightsalmon; } .bd-lightsalmon { border-color: lightsalmon; } .bg-lightsalmon { background-color: lightsalmon; }
+.cl-lightseagreen { color: lightseagreen; } .bd-lightseagreen { border-color: lightseagreen; } .bg-lightseagreen { background-color: lightseagreen; }
+.cl-lightskyblue { color: lightskyblue; } .bd-lightskyblue { border-color: lightskyblue; } .bg-lightskyblue { background-color: lightskyblue; }
+.cl-lightslategray { color: lightslategray; } .bd-lightslategray { border-color: lightslategray; } .bg-lightslategray { background-color: lightslategray; }
+.cl-lightslategrey { color: lightslategrey; } .bd-lightslategrey { border-color: lightslategrey; } .bg-lightslategrey { background-color: lightslategrey; }
+.cl-lightsteelblue { color: lightsteelblue; } .bd-lightsteelblue { border-color: lightsteelblue; } .bg-lightsteelblue { background-color: lightsteelblue; }
+.cl-lightyellow { color: lightyellow; } .bd-lightyellow { border-color: lightyellow; } .bg-lightyellow { background-color: lightyellow; }
+.cl-lime { color: lime; } .bd-lime { border-color: lime; } .bg-lime { background-color: lime; }
+.cl-limegreen { color: limegreen; } .bd-limegreen { border-color: limegreen; } .bg-limegreen { background-color: limegreen; }
+.cl-linen { color: linen; } .bd-linen { border-color: linen; } .bg-linen { background-color: linen; }
+.cl-magenta { color: magenta; } .bd-magenta { border-color: magenta; } .bg-magenta { background-color: magenta; }
+.cl-maroon { color: maroon; } .bd-maroon { border-color: maroon; } .bg-maroon { background-color: maroon; }
+.cl-mediumaquamarine { color: mediumaquamarine; } .bd-mediumaquamarine { border-color: mediumaquamarine; } .bg-mediumaquamarine { background-color: mediumaquamarine; }
+.cl-mediumblue { color: mediumblue; } .bd-mediumblue { border-color: mediumblue; } .bg-mediumblue { background-color: mediumblue; }
+.cl-mediumorchid { color: mediumorchid; } .bd-mediumorchid { border-color: mediumorchid; } .bg-mediumorchid { background-color: mediumorchid; }
+.cl-mediumpurple { color: mediumpurple; } .bd-mediumpurple { border-color: mediumpurple; } .bg-mediumpurple { background-color: mediumpurple; }
+.cl-mediumseagreen { color: mediumseagreen; } .bd-mediumseagreen { border-color: mediumseagreen; } .bg-mediumseagreen { background-color: mediumseagreen; }
+.cl-mediumslateblue { color: mediumslateblue; } .bd-mediumslateblue { border-color: mediumslateblue; } .bg-mediumslateblue { background-color: mediumslateblue; }
+.cl-mediumspringgreen { color: mediumspringgreen; } .bd-mediumspringgreen { border-color: mediumspringgreen; } .bg-mediumspringgreen { background-color: mediumspringgreen; }
+.cl-mediumturquoise { color: mediumturquoise; } .bd-mediumturquoise { border-color: mediumturquoise; } .bg-mediumturquoise { background-color: mediumturquoise; }
+.cl-mediumvioletred { color: mediumvioletred; } .bd-mediumvioletred { border-color: mediumvioletred; } .bg-mediumvioletred { background-color: mediumvioletred; }
+.cl-midnightblue { color: midnightblue; } .bd-midnightblue { border-color: midnightblue; } .bg-midnightblue { background-color: midnightblue; }
+.cl-mintcream { color: mintcream; } .bd-mintcream { border-color: mintcream; } .bg-mintcream { background-color: mintcream; }
+.cl-mistyrose { color: mistyrose; } .bd-mistyrose { border-color: mistyrose; } .bg-mistyrose { background-color: mistyrose; }
+.cl-moccasin { color: moccasin; } .bd-moccasin { border-color: moccasin; } .bg-moccasin { background-color: moccasin; }
+.cl-navajowhite { color: navajowhite; } .bd-navajowhite { border-color: navajowhite; } .bg-navajowhite { background-color: navajowhite; }
+.cl-navy { color: navy; } .bd-navy { border-color: navy; } .bg-navy { background-color: navy; }
+.cl-oldlace { color: oldlace; } .bd-oldlace { border-color: oldlace; } .bg-oldlace { background-color: oldlace; }
+.cl-olive { color: olive; } .bd-olive { border-color: olive; } .bg-olive { background-color: olive; }
+.cl-olivedrab { color: olivedrab; } .bd-olivedrab { border-color: olivedrab; } .bg-olivedrab { background-color: olivedrab; }
+.cl-orange { color: orange; } .bd-orange { border-color: orange; } .bg-orange { background-color: orange; }
+.cl-orangered { color: orangered; } .bd-orangered { border-color: orangered; } .bg-orangered { background-color: orangered; }
+.cl-orchid { color: orchid; } .bd-orchid { border-color: orchid; } .bg-orchid { background-color: orchid; }
+.cl-palegoldenrod { color: palegoldenrod; } .bd-palegoldenrod { border-color: palegoldenrod; } .bg-palegoldenrod { background-color: palegoldenrod; }
+.cl-palegreen { color: palegreen; } .bd-palegreen { border-color: palegreen; } .bg-palegreen { background-color: palegreen; }
+.cl-paleturquoise { color: paleturquoise; } .bd-paleturquoise { border-color: paleturquoise; } .bg-paleturquoise { background-color: paleturquoise; }
+.cl-palevioletred { color: palevioletred; } .bd-palevioletred { border-color: palevioletred; } .bg-palevioletred { background-color: palevioletred; }
+.cl-papayawhip { color: papayawhip; } .bd-papayawhip { border-color: papayawhip; } .bg-papayawhip { background-color: papayawhip; }
+.cl-peachpuff { color: peachpuff; } .bd-peachpuff { border-color: peachpuff; } .bg-peachpuff { background-color: peachpuff; }
+.cl-peru { color: peru; } .bd-peru { border-color: peru; } .bg-peru { background-color: peru; }
+.cl-pink { color: pink; } .bd-pink { border-color: pink; } .bg-pink { background-color: pink; }
+.cl-plum { color: plum; } .bd-plum { border-color: plum; } .bg-plum { background-color: plum; }
+.cl-powderblue { color: powderblue; } .bd-powderblue { border-color: powderblue; } .bg-powderblue { background-color: powderblue; }
+.cl-purple { color: purple; } .bd-purple { border-color: purple; } .bg-purple { background-color: purple; }
+.cl-rebeccapurple { color: rebeccapurple; }  .bd-rebeccapurple { border-color: rebeccapurple; } .bg-rebeccapurple { background-color: rebeccapurple; }
+.cl-red { color: red; } .bd-red { border-color: red; } .bg-red { background-color: red; }
+.cl-rosybrown { color: rosybrown; } .bd-rosybrown { border-color: rosybrown; } .bg-rosybrown { background-color: rosybrown; }
+.cl-royalblue { color: royalblue; } .bd-royalblue { border-color: royalblue; } .bg-royalblue { background-color: royalblue; }
+.cl-saddlebrown { color: saddlebrown; } .bd-saddlebrown { border-color: saddlebrown; } .bg-saddlebrown { background-color: saddlebrown; }
+.cl-salmon { color: salmon; } .bd-salmon { border-color: salmon; } .bg-salmon { background-color: salmon; }
+.cl-sandybrown { color: sandybrown; } .bd-sandybrown { border-color: sandybrown; } .bg-sandybrown { background-color: sandybrown; }
+.cl-seagreen { color: seagreen; } .bd-seagreen { border-color: seagreen; } .bg-seagreen { background-color: seagreen; }
+.cl-seashell { color: seashell; } .bd-seashell { border-color: seashell; } .bg-seashell { background-color: seashell; }
+.cl-sienna { color: sienna; } .bd-sienna { border-color: sienna; } .bg-sienna { background-color: sienna; }
+.cl-silver { color: silver; } .bd-silver { border-color: silver; } .bg-silver { background-color: silver; }
+.cl-skyblue { color: skyblue; } .bd-skyblue { border-color: skyblue; } .bg-skyblue { background-color: skyblue; }
+.cl-slateblue { color: slateblue; } .bd-slateblue { border-color: slateblue; } .bg-slateblue { background-color: slateblue; }
+.cl-slategray { color: slategray; } .bd-slategray { border-color: slategray; } .bg-slategray { background-color: slategray; }
+.cl-slategrey { color: slategrey; } .bd-slategrey { border-color: slategrey; } .bg-slategrey { background-color: slategrey; }
+.cl-snow { color: snow; } .bd-snow { border-color: snow; } .bg-snow { background-color: snow; }
+.cl-springgreen { color: springgreen; } .bd-springgreen { border-color: springgreen; } .bg-springgreen { background-color: springgreen; }
+.cl-steelblue { color: steelblue; } .bd-steelblue { border-color: steelblue; } .bg-steelblue { background-color: steelblue; }
+.cl-tan { color: tan; } .bd-tan { border-color: tan; } .bg-tan { background-color: tan; }
+.cl-teal { color: teal; } .bd-teal { border-color: teal; } .bg-teal { background-color: teal; }
+.cl-thistle { color: thistle; } .bd-thistle { border-color: thistle; } .bg-thistle { background-color: thistle; }
+.cl-tomato { color: tomato; } .bd-tomato { border-color: tomato; } .bg-tomato { background-color: tomato; }
+.cl-turquoise { color: turquoise; } .bd-turquoise { border-color: turquoise; } .bg-turquoise { background-color: turquoise; }
+.cl-violet { color: violet; } .bd-violet { border-color: violet; } .bg-violet { background-color: violet; }
+.cl-wheat { color: wheat; } .bd-wheat { border-color: wheat; } .bg-wheat { background-color: wheat; }
+.cl-white { color: white; } .bd-white { border-color: white; } .bg-white { background-color: white; }
+.cl-whitesmoke { color: whitesmoke; } .bd-whitesmoke { border-color: whitesmoke; } .bg-whitesmoke { background-color: whitesmoke; }
+.cl-yellow { color: yellow; } .bd-yellow { border-color: yellow; } .bg-yellow { background-color: yellow; }
+.cl-yellowgreen { color: yellowgreen; } .bd-yellowgreen { border-color: yellowgreen; } .bg-yellowgreen { background-color: yellowgreen; }
 

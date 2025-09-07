@@ -1,11 +1,4 @@
 
-CODE, PRE {
-    font-family: "Courier New", Courier, monospace;
-    white-space: pre-wrap;
-    margin: 1em 0;
-    overflow: auto;
-    }
-
 HR {
     border: none;
     border-top: 1px solid var(--divider-color);
@@ -14,34 +7,25 @@ HR {
     clear: both;
     }
 
-BIG.trice { font-size: 1.75em }
-BIG.twice { font-size: 1.5em }
-BIG       { font-size: 1.25em }
-BIG.half  { font-size: 1.125em }
+BIG.trice { font-size: 1.75em; }
+BIG.twice { font-size: 1.5em; }
+BIG       { font-size: 1.25em; }
+BIG.half  { font-size: 1.125em; }
 
-SMALL.half  { font-size: .9em }
-SMALL       { font-size: .875em }
-SMALL.twice { font-size: .75em }
-SMALL.trice { font-size: .5em }
+SMALL.half  { font-size: .9em; }
+SMALL       { font-size: .875em; }
+SMALL.twice { font-size: .75em; }
+SMALL.trice { font-size: .5em; }
 
-B      { font-weight: 700 }
-STRONG { font-weight: 800 }
-I, EM  { font-style: italic }
+B      { font-weight: 700; }
+STRONG { font-weight: 800; }
+I, EM  { font-style: italic; }
 
-STRIKE { text-decoration: line-through }
-U { text-decoration: underline }
+STRIKE { text-decoration: line-through; }
+U { text-decoration: underline; }
     
-SUB, SUP {
-    position: relative;
-    font-size: .75em;
-    line-height: 1;
-    vertical-align: baseline;
-    }
+*[align="left"]    { text-align: left; }
+*[align="center"]  { text-align: center; }
+*[align="right"]   { text-align: right; }
+*[align="justify"] { text-align: justify; }
 
-SUP { top: -0.5em }
-SUB { bottom: -0.25em }
-
-*[align="left"]    { text-align: left }
-*[align="center"]  { text-align: center }
-*[align="right"]   { text-align: right }
-*[align="justify"] { text-align: justify }
