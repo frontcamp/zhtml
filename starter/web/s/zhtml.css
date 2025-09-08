@@ -28,13 +28,24 @@ Author: Maksym Plaksin <maxim.plaksin@gmail.com>
  *   Paddings
  *   Margins
  *   Width
+ *   Height
+ *   Layout Container
  */
 
-/* ===[ DEFAULTS ]====================================================== */
+/* ===[ SETTINGS ]====================================================== */
 
 
 :root {
     --html-font-size: 100%;  /* 100% = 16px; 112.5% = 18px; */
+
+    --layout-container-max-width: 960px;    /* layout width (maximal) */
+    --layout-container-margin-block: 1em;   /* vertical margins */
+    --layout-container-padding-inline: 0;   /* horizontal paddings */
+
+    --body-font-color: #000;
+    --body-font-family: Arial, sans-serif;
+    --body-line-height: 1.5;
+    --body-background: #fff;
 
     --h1-fs: 2.00rem;
     --h2-fs: 1.75rem;
@@ -69,10 +80,10 @@ HTML {
 *, *::before, *::after { box-sizing: inherit; }
 
 BODY {
-    color: black;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    background: white;
+    color: var(--body-font-color);
+    font-family: var(--body-font-family);
+    line-height: var(--body-line-height);
+    background: var(--body-background);
     min-height: 100%;
     }
 
@@ -1087,6 +1098,311 @@ maxw-0, maxw-none, maxw-unset, maxw-min-content, maxw-max-content, maxw-fit-cont
 .maxw-min-content { max-width: min-content; }
 .maxw-max-content { max-width: max-content; }
 .maxw-fit-content { max-width: fit-content; }
+
+/*
+Height
+
+WARNING: In selector names, "pc" means "%" (percent), not pica!
+
+Schema:
+
+h-XY     height:     XY  [Y = px|em|pc]
+minh-XY  min-height: XY  [Y = px|em|pc]
+maxh-XY  max-height: XY  [Y = px|em|pc]
+
+X = px: 5,10,15,20,25,30,35,40,45,50,70,80,90,100,150,200,250,300,350,400,450,500,600,700,800,900,1000
+    em: (.25–3 step .25),4,5,6,7,8,9,10,15,20,25,30 (naming: 025, 05, 175 …)
+    pc: 1,3,5,7,10,15,20,25,30,33,35,40,50,60,66,70,75,80,90,100
+
+Special (w/o units):
+h-0, h-auto, h-unset
+minh-0, minh-auto, minh-unset
+maxh-0, maxh-none, maxh-unset
+
+Order:
+
+h-5px, h-10px, ...
+h-025em, h-05em, ...
+h-1pc, h-3pc, ...
+
+minh-5px, minh-10px, ...
+minh-025em, minh-05em, ...
+minh-1pc, minh-3pc, ...
+
+maxh-5px, maxh-10px, ...
+maxh-025em, maxh-05em, ...
+maxh-1pc, maxh-3pc, ...
+
+h-0, h-auto, h-unset
+minh-0, minh-auto, minh-unset
+maxh-0, maxh-none, maxh-unset
+*/
+
+/* ===== HEIGHT UTILITIES (ORDER-PRESERVING) ===== */
+/* WARNING: In selector names, "pc" means "%" (percent), not pica! */
+
+/* h-XY (height), px */
+.h-5px { height: 5px; }
+.h-10px { height: 10px; }
+.h-15px { height: 15px; }
+.h-20px { height: 20px; }
+.h-25px { height: 25px; }
+.h-30px { height: 30px; }
+.h-35px { height: 35px; }
+.h-40px { height: 40px; }
+.h-45px { height: 45px; }
+.h-50px { height: 50px; }
+.h-70px { height: 70px; }
+.h-80px { height: 80px; }
+.h-90px { height: 90px; }
+.h-100px { height: 100px; }
+.h-150px { height: 150px; }
+.h-200px { height: 200px; }
+.h-250px { height: 250px; }
+.h-300px { height: 300px; }
+.h-350px { height: 350px; }
+.h-400px { height: 400px; }
+.h-450px { height: 450px; }
+.h-500px { height: 500px; }
+.h-600px { height: 600px; }
+.h-700px { height: 700px; }
+.h-800px { height: 800px; }
+.h-900px { height: 900px; }
+.h-1000px { height: 1000px; }
+
+/* h-XY (height), em */
+.h-025em { height: .25em; }
+.h-05em { height: .5em; }
+.h-075em { height: .75em; }
+.h-1em { height: 1em; }
+.h-125em { height: 1.25em; }
+.h-15em { height: 1.5em; }
+.h-175em { height: 1.75em; }
+.h-2em { height: 2em; }
+.h-225em { height: 2.25em; }
+.h-25em { height: 2.5em; }
+.h-275em { height: 2.75em; }
+.h-3em { height: 3em; }
+.h-4em { height: 4em; }
+.h-5em { height: 5em; }
+.h-6em { height: 6em; }
+.h-7em { height: 7em; }
+.h-8em { height: 8em; }
+.h-9em { height: 9em; }
+.h-10em { height: 10em; }
+.h-15em { height: 15em; }
+.h-20em { height: 20em; }
+.h-25em { height: 25em; }
+.h-30em { height: 30em; }
+
+/* h-XY (height), pc (%) */
+.h-1pc { height: 1%; }
+.h-3pc { height: 3%; }
+.h-5pc { height: 5%; }
+.h-7pc { height: 7%; }
+.h-10pc { height: 10%; }
+.h-15pc { height: 15%; }
+.h-20pc { height: 20%; }
+.h-25pc { height: 25%; }
+.h-30pc { height: 30%; }
+.h-33pc { height: 33%; }
+.h-35pc { height: 35%; }
+.h-40pc { height: 40%; }
+.h-50pc { height: 50%; }
+.h-60pc { height: 60%; }
+.h-66pc { height: 66%; }
+.h-70pc { height: 70%; }
+.h-75pc { height: 75%; }
+.h-80pc { height: 80%; }
+.h-90pc { height: 90%; }
+.h-100pc { height: 100%; }
+
+/* minh-XY (min-height), px */
+.minh-5px { min-height: 5px; }
+.minh-10px { min-height: 10px; }
+.minh-15px { min-height: 15px; }
+.minh-20px { min-height: 20px; }
+.minh-25px { min-height: 25px; }
+.minh-30px { min-height: 30px; }
+.minh-35px { min-height: 35px; }
+.minh-40px { min-height: 40px; }
+.minh-45px { min-height: 45px; }
+.minh-50px { min-height: 50px; }
+.minh-70px { min-height: 70px; }
+.minh-80px { min-height: 80px; }
+.minh-90px { min-height: 90px; }
+.minh-100px { min-height: 100px; }
+.minh-150px { min-height: 150px; }
+.minh-200px { min-height: 200px; }
+.minh-250px { min-height: 250px; }
+.minh-300px { min-height: 300px; }
+.minh-350px { min-height: 350px; }
+.minh-400px { min-height: 400px; }
+.minh-450px { min-height: 450px; }
+.minh-500px { min-height: 500px; }
+.minh-600px { min-height: 600px; }
+.minh-700px { min-height: 700px; }
+.minh-800px { min-height: 800px; }
+.minh-900px { min-height: 900px; }
+.minh-1000px { min-height: 1000px; }
+
+/* minh-XY (min-height), em */
+.minh-025em { min-height: .25em; }
+.minh-05em { min-height: .5em; }
+.minh-075em { min-height: .75em; }
+.minh-1em { min-height: 1em; }
+.minh-125em { min-height: 1.25em; }
+.minh-15em { min-height: 1.5em; }
+.minh-175em { min-height: 1.75em; }
+.minh-2em { min-height: 2em; }
+.minh-225em { min-height: 2.25em; }
+.minh-25em { min-height: 2.5em; }
+.minh-275em { min-height: 2.75em; }
+.minh-3em { min-height: 3em; }
+.minh-4em { min-height: 4em; }
+.minh-5em { min-height: 5em; }
+.minh-6em { min-height: 6em; }
+.minh-7em { min-height: 7em; }
+.minh-8em { min-height: 8em; }
+.minh-9em { min-height: 9em; }
+.minh-10em { min-height: 10em; }
+.minh-15em { min-height: 15em; }
+.minh-20em { min-height: 20em; }
+.minh-25em { min-height: 25em; }
+.minh-30em { min-height: 30em; }
+
+/* minh-XY (min-height), pc (%) */
+.minh-1pc { min-height: 1%; }
+.minh-3pc { min-height: 3%; }
+.minh-5pc { min-height: 5%; }
+.minh-7pc { min-height: 7%; }
+.minh-10pc { min-height: 10%; }
+.minh-15pc { min-height: 15%; }
+.minh-20pc { min-height: 20%; }
+.minh-25pc { min-height: 25%; }
+.minh-30pc { min-height: 30%; }
+.minh-33pc { min-height: 33%; }
+.minh-35pc { min-height: 35%; }
+.minh-40pc { min-height: 40%; }
+.minh-50pc { min-height: 50%; }
+.minh-60pc { min-height: 60%; }
+.minh-66pc { min-height: 66%; }
+.minh-70pc { min-height: 70%; }
+.minh-75pc { min-height: 75%; }
+.minh-80pc { min-height: 80%; }
+.minh-90pc { min-height: 90%; }
+.minh-100pc { min-height: 100%; }
+
+/* maxh-XY (max-height), px */
+.maxh-5px { max-height: 5px; }
+.maxh-10px { max-height: 10px; }
+.maxh-15px { max-height: 15px; }
+.maxh-20px { max-height: 20px; }
+.maxh-25px { max-height: 25px; }
+.maxh-30px { max-height: 30px; }
+.maxh-35px { max-height: 35px; }
+.maxh-40px { max-height: 40px; }
+.maxh-45px { max-height: 45px; }
+.maxh-50px { max-height: 50px; }
+.maxh-70px { max-height: 70px; }
+.maxh-80px { max-height: 80px; }
+.maxh-90px { max-height: 90px; }
+.maxh-100px { max-height: 100px; }
+.maxh-150px { max-height: 150px; }
+.maxh-200px { max-height: 200px; }
+.maxh-250px { max-height: 250px; }
+.maxh-300px { max-height: 300px; }
+.maxh-350px { max-height: 350px; }
+.maxh-400px { max-height: 400px; }
+.maxh-450px { max-height: 450px; }
+.maxh-500px { max-height: 500px; }
+.maxh-600px { max-height: 600px; }
+.maxh-700px { max-height: 700px; }
+.maxh-800px { max-height: 800px; }
+.maxh-900px { max-height: 900px; }
+.maxh-1000px { max-height: 1000px; }
+
+/* maxh-XY (max-height), em */
+.maxh-025em { max-height: .25em; }
+.maxh-05em { max-height: .5em; }
+.maxh-075em { max-height: .75em; }
+.maxh-1em { max-height: 1em; }
+.maxh-125em { max-height: 1.25em; }
+.maxh-15em { max-height: 1.5em; }
+.maxh-175em { max-height: 1.75em; }
+.maxh-2em { max-height: 2em; }
+.maxh-225em { max-height: 2.25em; }
+.maxh-25em { max-height: 2.5em; }
+.maxh-275em { max-height: 2.75em; }
+.maxh-3em { max-height: 3em; }
+.maxh-4em { max-height: 4em; }
+.maxh-5em { max-height: 5em; }
+.maxh-6em { max-height: 6em; }
+.maxh-7em { max-height: 7em; }
+.maxh-8em { max-height: 8em; }
+.maxh-9em { max-height: 9em; }
+.maxh-10em { max-height: 10em; }
+.maxh-15em { max-height: 15em; }
+.maxh-20em { max-height: 20em; }
+.maxh-25em { max-height: 25em; }
+.maxh-30em { max-height: 30em; }
+
+/* maxh-XY (max-height), pc (%) */
+.maxh-1pc { max-height: 1%; }
+.maxh-3pc { max-height: 3%; }
+.maxh-5pc { max-height: 5%; }
+.maxh-7pc { max-height: 7%; }
+.maxh-10pc { max-height: 10%; }
+.maxh-15pc { max-height: 15%; }
+.maxh-20pc { max-height: 20%; }
+.maxh-25pc { max-height: 25%; }
+.maxh-30pc { max-height: 30%; }
+.maxh-33pc { max-height: 33%; }
+.maxh-35pc { max-height: 35%; }
+.maxh-40pc { max-height: 40%; }
+.maxh-50pc { max-height: 50%; }
+.maxh-60pc { max-height: 60%; }
+.maxh-66pc { max-height: 66%; }
+.maxh-70pc { max-height: 70%; }
+.maxh-75pc { max-height: 75%; }
+.maxh-80pc { max-height: 80%; }
+.maxh-90pc { max-height: 90%; }
+.maxh-100pc { max-height: 100%; }
+
+/* Specials (no units) */
+.h-0 { height: 0; }
+.h-auto { height: auto; }
+.h-unset { height: unset; }
+
+.minh-0 { min-height: 0; }
+.minh-auto { min-height: auto; }
+.minh-unset { min-height: unset; }
+
+.maxh-0 { max-height: 0; }
+.maxh-none { max-height: none; }
+.maxh-unset { max-height: unset; }
+
+/* Layout Container */
+
+.layout-container {
+    padding-inline: var(--layout-container-padding-inline);
+    margin-block: var(--layout-container-margin-block);
+    margin-inline: auto;
+    width: 100%;
+    max-width: var(--layout-container-max-width);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
