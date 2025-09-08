@@ -365,29 +365,33 @@ Paddings
 
 WARNING: In selector names, "pc" means "%" (percent), not pica!
 
-p-XY   padding:        XY [Y=px|em|pc];
-pt-XY  padding-top:    XY [Y=px];
-pr-XY  padding-right:  XY [Y=px];
-pb-XY  padding-bottom: XY [Y=px];
-pl-XY  padding-left:   XY [Y=px];
-px-XY  padding-inline: XY [Y=px|em|pc];
-py-XY  padding-block:  XY [Y=px|em];
+Schema:
+
+p-XY   padding:        XY [Y = px|em|pc];
+pt-XY  padding-top:    XY [Y = px|em];
+pr-XY  padding-right:  XY [Y = px|em];
+pb-XY  padding-bottom: XY [Y = px|em];
+pl-XY  padding-left:   XY [Y = px|em];
+px-XY  padding-inline: XY [Y = px|em|pc];
+py-XY  padding-block:  XY [Y = px|em];
 
 X = px: 5-50, step 5
-    em: .25-3, step .25
+    em: .25-3, step .25 (naming: 025=0.25; 05=0.5; 175=1.75)
     pc: 5,10,15,20,25,30,33,35,40,50,66,75,100
-
-em naming: 025=0.25; 05=0.5; 175=1.75
 
 p-0, pt-0, pr-0, pb-0, pl-0, px-0, py-0 - w/o units
 p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
 
 Order:
+
 p-5px, p-10px, ...
 p-025em, p-05em, ...
 p-5pc, p-10pc, ...
 pt-5px, pr-5px, pb-5px, pl-5px
 pt-10px, pr-10px, pb-10px, pl-10px
+...
+pt-025em, pr-025em, pb-025em, pl-025em
+pt-05em, pr-05em, pb-05em, pl-05em
 ...
 px-5px, px-10px, ...
 px-025em, px-05em, ...
@@ -398,9 +402,7 @@ p-0, pt-0, pr-0, pb-0, pl-0, px-0, py-0
 p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
 */
 
-/* ===== PADDING UTILITIES (ORDER-PRESERVING) ===== */
-
-/* p-XY, px */
+/* p-XY (all sides), px */
 .p-5px  { padding: 5px;  }
 .p-10px { padding: 10px; }
 .p-15px { padding: 15px; }
@@ -412,7 +414,7 @@ p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
 .p-45px { padding: 45px; }
 .p-50px { padding: 50px; }
 
-/* p-XY, em */
+/* p-XY (all sides), em */
 .p-025em { padding: 0.25em; }
 .p-05em  { padding: 0.50em; }
 .p-075em { padding: 0.75em; }
@@ -426,7 +428,7 @@ p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
 .p-275em { padding: 2.75em; }
 .p-3em   { padding: 3.00em; }
 
-/* p-XY, pc (%) */
+/* p-XY (all sides), pc (%) */
 .p-5pc  { padding: 5%;  }
 .p-10pc { padding: 10%; }
 .p-15pc { padding: 15%; }
@@ -441,7 +443,7 @@ p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
 .p-75pc { padding: 75%; }
 .p-100pc{ padding: 100%; }
 
-/* pt/pr/pb/pl, px */
+/* pt/pr/pb/pl (one side), px */
 .pt-5px  { padding-top: 5px;  } .pr-5px  { padding-right: 5px;  } .pb-5px  { padding-bottom: 5px;  } .pl-5px  { padding-left: 5px;  }
 .pt-10px { padding-top: 10px; } .pr-10px { padding-right: 10px; } .pb-10px { padding-bottom: 10px; } .pl-10px { padding-left: 10px; }
 .pt-15px { padding-top: 15px; } .pr-15px { padding-right: 15px; } .pb-15px { padding-bottom: 15px; } .pl-15px { padding-left: 15px; }
@@ -452,6 +454,20 @@ p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
 .pt-40px { padding-top: 40px; } .pr-40px { padding-right: 40px; } .pb-40px { padding-bottom: 40px; } .pl-40px { padding-left: 40px; }
 .pt-45px { padding-top: 45px; } .pr-45px { padding-right: 45px; } .pb-45px { padding-bottom: 45px; } .pl-45px { padding-left: 45px; }
 .pt-50px { padding-top: 50px; } .pr-50px { padding-right: 50px; } .pb-50px { padding-bottom: 50px; } .pl-50px { padding-left: 50px; }
+
+/* pt/pr/pb/pl (one side), em */
+.pt-025em { padding-top: 0.25em; } .pr-025em { padding-right: 0.25em; } .pb-025em { padding-bottom: 0.25em; } .pl-025em { padding-left: 0.25em; }
+.pt-05em  { padding-top: 0.50em; } .pr-05em  { padding-right: 0.50em; } .pb-05em  { padding-bottom: 0.50em; } .pl-05em  { padding-left: 0.50em; }
+.pt-075em { padding-top: 0.75em; } .pr-075em { padding-right: 0.75em; } .pb-075em { padding-bottom: 0.75em; } .pl-075em { padding-left: 0.75em; }
+.pt-1em   { padding-top: 1.00em; } .pr-1em   { padding-right: 1.00em; } .pb-1em   { padding-bottom: 1.00em; } .pl-1em   { padding-left: 1.00em; }
+.pt-125em { padding-top: 1.25em; } .pr-125em { padding-right: 1.25em; } .pb-125em { padding-bottom: 1.25em; } .pl-125em { padding-left: 1.25em; }
+.pt-15em  { padding-top: 1.50em; } .pr-15em  { padding-right: 1.50em; } .pb-15em  { padding-bottom: 1.50em; } .pl-15em  { padding-left: 1.50em; }
+.pt-175em { padding-top: 1.75em; } .pr-175em { padding-right: 1.75em; } .pb-175em { padding-bottom: 1.75em; } .pl-175em { padding-left: 1.75em; }
+.pt-2em   { padding-top: 2.00em; } .pr-2em   { padding-right: 2.00em; } .pb-2em   { padding-bottom: 2.00em; } .pl-2em   { padding-left: 2.00em; }
+.pt-225em { padding-top: 2.25em; } .pr-225em { padding-right: 2.25em; } .pb-225em { padding-bottom: 2.25em; } .pl-225em { padding-left: 2.25em; }
+.pt-25em  { padding-top: 2.50em; } .pr-25em  { padding-right: 2.50em; } .pb-25em  { padding-bottom: 2.50em; } .pl-25em  { padding-left: 2.50em; }
+.pt-275em { padding-top: 2.75em; } .pr-275em { padding-right: 2.75em; } .pb-275em { padding-bottom: 2.75em; } .pl-275em { padding-left: 2.75em; }
+.pt-3em   { padding-top: 3.00em; } .pr-3em   { padding-right: 3.00em; } .pb-3em   { padding-bottom: 3.00em; } .pl-3em   { padding-left: 3.00em; }
 
 /* px-XY (inline), px */
 .px-5px  { padding-inline: 5px;  }
@@ -466,18 +482,18 @@ p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
 .px-50px { padding-inline: 50px; }
 
 /* px-XY (inline), em */
-.px-025em { padding-inline: .25em;  }
-.px-05em  { padding-inline: .5em;   }
-.px-075em { padding-inline: .75em;  }
-.px-1em   { padding-inline: 1em;    }
+.px-025em { padding-inline: 0.25em; }
+.px-05em  { padding-inline: 0.50em; }
+.px-075em { padding-inline: 0.75em; }
+.px-1em   { padding-inline: 1.00em; }
 .px-125em { padding-inline: 1.25em; }
-.px-15em  { padding-inline: 1.5em;  }
+.px-15em  { padding-inline: 1.50em; }
 .px-175em { padding-inline: 1.75em; }
-.px-2em   { padding-inline: 2em;    }
+.px-2em   { padding-inline: 2.00em; }
 .px-225em { padding-inline: 2.25em; }
-.px-25em  { padding-inline: 2.5em;  }
+.px-25em  { padding-inline: 2.50em; }
 .px-275em { padding-inline: 2.75em; }
-.px-3em   { padding-inline: 3em;    }
+.px-3em   { padding-inline: 3.00em; }
 
 /* px-XY (inline), pc (%) */
 .px-5pc  { padding-inline: 5%;  }
@@ -492,9 +508,9 @@ p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
 .px-50pc { padding-inline: 50%; }
 .px-66pc { padding-inline: 66%; }
 .px-75pc { padding-inline: 75%; }
-.px-100pc{ padding-inline: 100%;}
+.px-100pc{ padding-inline: 100%; }
 
-/* py-XY (block) — px */
+/* py-XY (block), px */
 .py-5px  { padding-block: 5px;  }
 .py-10px { padding-block: 10px; }
 .py-15px { padding-block: 15px; }
@@ -507,18 +523,18 @@ p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
 .py-50px { padding-block: 50px; }
 
 /* py-XY (block), em */
-.py-025em { padding-block: .25em;  }
-.py-05em  { padding-block: .5em;   }
-.py-075em { padding-block: .75em;  }
-.py-1em   { padding-block: 1em;    }
+.py-025em { padding-block: 0.25em; }
+.py-05em  { padding-block: 0.50em; }
+.py-075em { padding-block: 0.75em; }
+.py-1em   { padding-block: 1.00em; }
 .py-125em { padding-block: 1.25em; }
-.py-15em  { padding-block: 1.5em;  }
+.py-15em  { padding-block: 1.50em; }
 .py-175em { padding-block: 1.75em; }
-.py-2em   { padding-block: 2em;    }
+.py-2em   { padding-block: 2.00em; }
 .py-225em { padding-block: 2.25em; }
-.py-25em  { padding-block: 2.5em;  }
+.py-25em  { padding-block: 2.50em; }
 .py-275em { padding-block: 2.75em; }
-.py-3em   { padding-block: 3em;    }
+.py-3em   { padding-block: 3.00em; }
 
 /* zeros (no units) */
 .p-0  { padding:        0; }
@@ -538,7 +554,192 @@ p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
 .px-unset { padding-inline: unset; }
 .py-unset { padding-block:  unset; }
 
+/*
+Margins
 
+WARNING: In selector names, "pc" means "%" (percent), not pica!
+
+Schema:
+
+m-XY   margin:        XY [Y = px|em|pc];
+mt-XY  margin-top:    XY [Y = px|em];
+mr-XY  margin-right:  XY [Y = px|em];
+mb-XY  margin-bottom: XY [Y = px|em];
+ml-XY  margin-left:   XY [Y = px|em];
+mx-XY  margin-inline: XY [Y = px|em|pc];
+my-XY  margin-block:  XY [Y = px|em];
+
+X = px: 5-50, step 5
+    em: .25-3, step .25 (naming: 025=0.25; 05=0.5; 175=1.75)
+    pc: 5,10,15,20,25,30,33,35,40,50,66,75,100
+
+m-0, mt-0, mr-0, mb-0, ml-0, mx-0, my-0 - w/o units
+m-auto, mx-auto - w/o units
+m-unset, mt-unset, mr-unset, mb-unset, ml-unset, mx-unset, my-unset
+
+Order:
+
+m-5px, m-10px, ...
+m-025em, m-05em, ...
+m-5pc, m-10pc, ...
+mt-5px, mr-5px, mb-5px, ml-5px
+mt-10px, mr-10px, mb-10px, ml-10px
+...
+mt-025em, mr-025em, mb-025em, ml-025em
+mt-05em, mr-05em, mb-05em, ml-05em
+...
+mx-5px, mx-10px, ...
+mx-025em, mx-05em, ...
+mx-5pc, mx-10pc, ...
+my-5px, my-10px, ...
+my-025em, my-05em, ...
+m-0, mt-0, mr-0, mb-0, ml-0, mx-0, my-0
+m-auto, mx-auto
+m-unset, mt-unset, mr-unset, mb-unset, ml-unset, mx-unset, my-unset
+*/
+
+/* m-XY (all sides), px */
+.m-5px  { margin: 5px;  }
+.m-10px { margin: 10px; }
+.m-15px { margin: 15px; }
+.m-20px { margin: 20px; }
+.m-25px { margin: 25px; }
+.m-30px { margin: 30px; }
+.m-35px { margin: 35px; }
+.m-40px { margin: 40px; }
+.m-45px { margin: 45px; }
+.m-50px { margin: 50px; }
+
+/* m-XY (all sides), em */
+.m-025em { margin: 0.25em; }
+.m-05em  { margin: 0.50em; }
+.m-075em { margin: 0.75em; }
+.m-1em   { margin: 1.00em; }
+.m-125em { margin: 1.25em; }
+.m-15em  { margin: 1.50em; }
+.m-175em { margin: 1.75em; }
+.m-2em   { margin: 2.00em; }
+.m-225em { margin: 2.25em; }
+.m-25em  { margin: 2.50em; }
+.m-275em { margin: 2.75em; }
+.m-3em   { margin: 3.00em; }
+
+/* m-XY (all sides), pc (%) */
+.m-5pc  { margin: 5%;  }
+.m-10pc { margin: 10%; }
+.m-15pc { margin: 15%; }
+.m-20pc { margin: 20%; }
+.m-25pc { margin: 25%; }
+.m-30pc { margin: 30%; }
+.m-33pc { margin: 33%; }
+.m-35pc { margin: 35%; }
+.m-40pc { margin: 40%; }
+.m-50pc { margin: 50%; }
+.m-66pc { margin: 66%; }
+.m-75pc { margin: 75%; }
+.m-100pc{ margin: 100%; }
+
+/* mt/mr/mb/ml (one side), px */
+.mt-5px  { margin-top: 5px;  } .mr-5px  { margin-right: 5px;  } .mb-5px  { margin-bottom: 5px;  } .ml-5px  { margin-left: 5px;  }
+.mt-10px { margin-top: 10px; } .mr-10px { margin-right: 10px; } .mb-10px { margin-bottom: 10px; } .ml-10px { margin-left: 10px; }
+.mt-15px { margin-top: 15px; } .mr-15px { margin-right: 15px; } .mb-15px { margin-bottom: 15px; } .ml-15px { margin-left: 15px; }
+.mt-20px { margin-top: 20px; } .mr-20px { margin-right: 20px; } .mb-20px { margin-bottom: 20px; } .ml-20px { margin-left: 20px; }
+.mt-25px { margin-top: 25px; } .mr-25px { margin-right: 25px; } .mb-25px { margin-bottom: 25px; } .ml-25px { margin-left: 25px; }
+.mt-30px { margin-top: 30px; } .mr-30px { margin-right: 30px; } .mb-30px { margin-bottom: 30px; } .ml-30px { margin-left: 30px; }
+.mt-35px { margin-top: 35px; } .mr-35px { margin-right: 35px; } .mb-35px { margin-bottom: 35px; } .ml-35px { margin-left: 35px; }
+.mt-40px { margin-top: 40px; } .mr-40px { margin-right: 40px; } .mb-40px { margin-bottom: 40px; } .ml-40px { margin-left: 40px; }
+.mt-45px { margin-top: 45px; } .mr-45px { margin-right: 45px; } .mb-45px { margin-bottom: 45px; } .ml-45px { margin-left: 45px; }
+.mt-50px { margin-top: 50px; } .mr-50px { margin-right: 50px; } .mb-50px { margin-bottom: 50px; } .ml-50px { margin-left: 50px; }
+
+/* mt/mr/mb/ml (one side), em */
+.mt-025em { margin-top: 0.25em; } .mr-025em { margin-right: 0.25em; } .mb-025em { margin-bottom: 0.25em; } .ml-025em { margin-left: 0.25em; }
+.mt-05em  { margin-top: 0.50em; } .mr-05em  { margin-right: 0.50em; } .mb-05em  { margin-bottom: 0.50em; } .ml-05em  { margin-left: 0.50em; }
+.mt-075em { margin-top: 0.75em; } .mr-075em { margin-right: 0.75em; } .mb-075em { margin-bottom: 0.75em; } .ml-075em { margin-left: 0.75em; }
+.mt-1em   { margin-top: 1.00em; } .mr-1em   { margin-right: 1.00em; } .mb-1em   { margin-bottom: 1.00em; } .ml-1em   { margin-left: 1.00em; }
+.mt-125em { margin-top: 1.25em; } .mr-125em { margin-right: 1.25em; } .mb-125em { margin-bottom: 1.25em; } .ml-125em { margin-left: 1.25em; }
+.mt-15em  { margin-top: 1.50em; } .mr-15em  { margin-right: 1.50em; } .mb-15em  { margin-bottom: 1.50em; } .ml-15em  { margin-left: 1.50em; }
+.mt-175em { margin-top: 1.75em; } .mr-175em { margin-right: 1.75em; } .mb-175em { margin-bottom: 1.75em; } .ml-175em { margin-left: 1.75em; }
+.mt-2em   { margin-top: 2.00em; } .mr-2em   { margin-right: 2.00em; } .mb-2em   { margin-bottom: 2.00em; } .ml-2em   { margin-left: 2.00em; }
+.mt-225em { margin-top: 2.25em; } .mr-225em { margin-right: 2.25em; } .mb-225em { margin-bottom: 2.25em; } .ml-225em { margin-left: 2.25em; }
+.mt-25em  { margin-top: 2.50em; } .mr-25em  { margin-right: 2.50em; } .mb-25em  { margin-bottom: 2.50em; } .ml-25em  { margin-left: 2.50em; }
+.mt-275em { margin-top: 2.75em; } .mr-275em { margin-right: 2.75em; } .mb-275em { margin-bottom: 2.75em; } .ml-275em { margin-left: 2.75em; }
+.mt-3em   { margin-top: 3.00em; } .mr-3em   { margin-right: 3.00em; } .mb-3em   { margin-bottom: 3.00em; } .ml-3em   { margin-left: 3.00em; }
+
+/* mx-XY (inline), px */
+.mx-5px  { margin-inline: 5px;  }
+.mx-10px { margin-inline: 10px; }
+.mx-15px { margin-inline: 15px; }
+.mx-20px { margin-inline: 20px; }
+.mx-25px { margin-inline: 25px; }
+.mx-30px { margin-inline: 30px; }
+.mx-35px { margin-inline: 35px; }
+.mx-40px { margin-inline: 40px; }
+.mx-45px { margin-inline: 45px; }
+.mx-50px { margin-inline: 50px; }
+
+/* mx-XY (inline), em */
+.mx-025em { margin-inline: 0.25em; }
+.mx-05em  { margin-inline: 0.50em; }
+.mx-075em { margin-inline: 0.75em; }
+.mx-1em   { margin-inline: 1.00em; }
+.mx-125em { margin-inline: 1.25em; }
+.mx-15em  { margin-inline: 1.50em; }
+.mx-175em { margin-inline: 1.75em; }
+.mx-2em   { margin-inline: 2.00em; }
+.mx-225em { margin-inline: 2.25em; }
+.mx-25em  { margin-inline: 2.50em; }
+.mx-275em { margin-inline: 2.75em; }
+.mx-3em   { margin-inline: 3.00em; }
+
+/* mx-XY (inline), pc (%) */
+.mx-5pc  { margin-inline: 5%;  }
+.mx-10pc { margin-inline: 10%; }
+.mx-15pc { margin-inline: 15%; }
+.mx-20pc { margin-inline: 20%; }
+.mx-25pc { margin-inline: 25%; }
+.mx-30pc { margin-inline: 30%; }
+.mx-33pc { margin-inline: 33%; }
+.mx-35pc { margin-inline: 35%; }
+.mx-40pc { margin-inline: 40%; }
+.mx-50pc { margin-inline: 50%; }
+.mx-66pc { margin-inline: 66%; }
+.mx-75pc { margin-inline: 75%; }
+.mx-100pc{ margin-inline: 100%; }
+
+/* my-XY (block), px */
+.my-5px  { margin-block: 5px;  }
+.my-10px { margin-block: 10px; }
+.my-15px { margin-block: 15px; }
+.my-20px { margin-block: 20px; }
+.my-25px { margin-block: 25px; }
+.my-30px { margin-block: 30px; }
+.my-35px { margin-block: 35px; }
+.my-40px { margin-block: 40px; }
+.my-45px { margin-block: 45px; }
+.my-50px { margin-block: 50px; }
+
+/* my-XY (block), em */
+.my-025em { margin-block: 0.25em; }
+.my-05em  { margin-block: 0.50em; }
+.my-075em { margin-block: 0.75em; }
+.my-1em   { margin-block: 1.00em; }
+.my-125em { margin-block: 1.25em; }
+.my-15em  { margin-block: 1.50em; }
+.my-175em { margin-block: 1.75em; }
+.my-2em   { margin-block: 2.00em; }
+.my-225em { margin-block: 2.25em; }
+.my-25em  { margin-block: 2.50em; }
+.my-275em { margin-block: 2.75em; }
+.my-3em   { margin-block: 3.00em; }
+
+/* zeros (no units) */
+.m-0 { margin: 0; } .mt-0 { margin-top: 0; } .mr-0 { margin-right: 0; } .mb-0 { margin-bottom: 0; } .ml-0 { margin-left: 0; } .mx-0 { margin-inline: 0; } .my-0 { margin-block: 0; }
+
+/* auto */
+.m-auto { margin: auto; } .mx-auto { margin-inline: auto; }
+
+/* unset */
+.m-unset { margin: unset; } .mt-unset { margin-top: unset; } .mr-unset { margin-right: unset; } .mb-unset { margin-bottom: unset; } .ml-unset { margin-left: unset; } .mx-unset { margin-inline: unset; } .my-unset { margin-block: unset; }
 
 
 
