@@ -4,32 +4,21 @@ v0.1.20250906-2040
 License: MIT
 Author: Maksym Plaksin <maxim.plaksin@gmail.com>
 */
+
 /**
  * [CONTENTS]
  *
- * DEFAULTS
  * GENERAL
- * ELEMENTS
- *   A, P, .code, .pre, .hr, .divider
  * TYPOGRAPHY
- *   .fs-* - font-size
- *   .fw-* - font-weight
- *   .fs-italic, .fs-oblique, .fs-normal - font-style
- *   .td-* - text-decoration
- *   .tt-* - text-transform
- *   .ls-* - letter-spacing
- *   .ta-* - text-align
- *   .lh-* - line-height
- *   .ws-nowrap, .ow-break, .hyphens, .fine-wrap
- *   .sub, .sup
  * EFFECTS
- *   Opacity
+ * BLOCK MODEL
+ * SPACING
+ * SIZE
  * LAYOUT
- *   Paddings
- *   Margins
- *   Width
- *   Height
- *   Layout Container
+ * FORMS
+ * TABLETS
+ * PHONES
+ * PRINT
  */
 
 /* ===[ SETTINGS ]====================================================== */
@@ -87,7 +76,9 @@ BODY {
     min-height: 100%;
     }
 
-/* ===[ ELEMENTS ]====================================================== */
+/* ===[ TYPOGRAPHY ]==================================================== */
+
+/* Headings */
 
 H1, H2, H3, H4, H5, H6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -103,12 +94,75 @@ H4, .h4 { font-size: var(--h4-fs); }
 H5, .h5 { font-size: var(--h5-fs); }
 H6, .h6 { font-size: var(--h6-fs); }
 
+/* Paragraph */
+
 P { margin-block: 1em; }
 
 .lead, P.lead {
     font-size: 1.125em;
     line-height: 1.6;
     }
+
+/* Inlines */
+
+A, A:visited {
+    color: var(--link-color);
+    text-decoration: underline;
+    }
+A:hover, A:focus {
+    color: var(--link-hover-color);
+    }
+A:focus:not(:focus-visible) { outline: none; }
+A:focus-visible { outline: auto; }
+
+CITE { font-style: italic; }
+
+MARK, .mark, .marker, .highlight { 
+    border-radius: .15em;
+    padding: 0 .1em;
+    }
+
+DEL  { text-decoration: line-through; }
+
+INS  { text-decoration: underline; }
+
+ABBR[title] {
+    text-decoration: underline dotted;
+    text-decoration-skip-ink: auto;
+    text-underline-offset: .08em;
+    cursor: help;
+    }
+
+SUB, .sub,
+SUP, .sup {
+    position: relative;
+    font-size: .75em;
+    line-height: 1;
+    vertical-align: baseline;
+    }
+
+SUP, .sup { top: -.5em; }
+SUB, .sub { bottom: -.25em; }
+
+/* Codes */
+
+CODE, .code, PRE, .pre, KBD, SAMP { font-family: "Courier New", Courier, monospace; }
+
+CODE, .code { white-space: normal; }
+
+PRE, .pre {
+    white-space: pre-wrap;
+    margin: 1em 0; 
+    overflow: auto;
+    }
+
+KBD {
+    border: 1px solid currentColor;
+    border-radius: .25em;
+    padding: .1em .35em;
+    }
+
+/* Lists */
 
 UL, OL {
     padding-left: 1.5em;
@@ -140,33 +194,7 @@ DL { margin: 1em 0; }
 
     DL DD { margin: 0 0 .5em 0; }
 
-A, A:visited {
-    color: var(--link-color);
-    text-decoration: underline;
-    }
-A:hover, A:focus {
-    color: var(--link-hover-color);
-    }
-A:focus:not(:focus-visible) { outline: none; }
-A:focus-visible { outline: auto; }
-
-CITE { font-style: italic; }
-
-MARK { 
-    border-radius: .15em;
-    padding: 0 .1em;
-    }
-
-DEL  { text-decoration: line-through; }
-
-INS  { text-decoration: underline; }
-
-ABBR[title] {
-    text-decoration: underline dotted;
-    text-decoration-skip-ink: auto;
-    text-underline-offset: .08em;
-    cursor: help;
-    }
+/* Blockquote */
 
 BLOCKQUOTE {
     border-left: .25rem solid currentColor;
@@ -181,6 +209,8 @@ BLOCKQUOTE {
         opacity: .8;
         }
 
+/* Figure */
+
 FIGURE { margin: 1em 0; }
 
     FIGURE > FIGCAPTION {
@@ -190,12 +220,16 @@ FIGURE { margin: 1em 0; }
         opacity: .9;
         }
 
+/* Media */
+
 IMG, VIDEO, CANVAS, SVG {
     vertical-align: middle;
     max-width: 100%;
     height: auto;
     display: inline-block;
     }
+
+/* Tables */
 
 TABLE {
     border-collapse: collapse;
@@ -210,43 +244,6 @@ TABLE {
     
     TABLE TH { text-align: left; }
 
-CODE, .code, PRE, .pre, KBD, SAMP { font-family: "Courier New", Courier, monospace; }
-
-CODE, .code { white-space: normal; }
-
-PRE, .pre {
-    white-space: pre-wrap;
-    margin: 1em 0; 
-    overflow: auto;
-    }
-
-KBD {
-    border: 1px solid currentColor;
-    border-radius: .25em;
-    padding: .1em .35em;
-    }
-
-SUB, SUP,
-.sub, .sup {
-    position: relative;
-    font-size: .75em;
-    line-height: 1;
-    vertical-align: baseline;
-    }
-
-SUP, .sup { top: -.5em; }
-SUB, .sub { bottom: -.25em; }
-
-.hr, .divider {
-    border: none;
-    border-top: 1px solid var(--divider-color);
-    margin: 1.5rem 0;
-    height: 0;
-    clear: both;
-    }
-
-/* ===[ TYPOGRAPHY ]==================================================== */
-
 /* Font Size */
 
 .fs-biggest  { font-size: 1.75em; }
@@ -260,6 +257,44 @@ SUB, .sub { bottom: -.25em; }
 .fs-small { font-size: .875em; }
 .fs-smaller { font-size: .75em; }
 .fs-smallest { font-size: .5em; }
+
+.fs-6px { font-size: 6px; }
+.fs-7px { font-size: 7px; }
+.fs-8px { font-size: 8px; }
+.fs-9px { font-size: 9px; }
+.fs-10px { font-size: 10px; }
+.fs-11px { font-size: 11px; }
+.fs-12px { font-size: 12px; }
+.fs-13px { font-size: 13px; }
+.fs-14px { font-size: 14px; }
+.fs-15px { font-size: 15px; }
+.fs-16px { font-size: 16px; }
+.fs-17px { font-size: 17px; }
+.fs-18px { font-size: 18px; }
+.fs-19px { font-size: 19px; }
+.fs-20px { font-size: 20px; }
+.fs-21px { font-size: 21px; }
+.fs-22px { font-size: 22px; }
+.fs-23px { font-size: 23px; }
+.fs-24px { font-size: 24px; }
+.fs-25px { font-size: 25px; }
+.fs-26px { font-size: 26px; }
+.fs-27px { font-size: 27px; }
+.fs-28px { font-size: 28px; }
+.fs-30px { font-size: 30px; }
+.fs-32px { font-size: 32px; }
+.fs-34px { font-size: 34px; }
+.fs-36px { font-size: 36px; }
+.fs-40px { font-size: 40px; }
+.fs-44px { font-size: 44px; }
+.fs-48px { font-size: 48px; }
+.fs-52px { font-size: 52px; }
+.fs-56px { font-size: 56px; }
+.fs-60px { font-size: 60px; }
+.fs-64px { font-size: 64px; }
+.fs-72px { font-size: 72px; }
+.fs-80px { font-size: 80px; }
+.fs-96px { font-size: 96px; }
 
 /* Font Weight */
 
@@ -336,7 +371,7 @@ SUB, .sub { bottom: -.25em; }
 .lh-25 { line-height: 2.5; }
 .lh-3 { line-height: 3; }
 
-/* Wrap & Hyphen */
+/* Wrapping */
 
 .ws-nowrap { white-space: nowrap; }
 .ow-break { overflow-wrap: anywhere; }
@@ -350,6 +385,16 @@ SUB, .sub { bottom: -.25em; }
     }
 
 /* ===[ EFFECTS ]======================================================= */
+
+/* Divider */
+
+.hr, .divider {
+    border: none;
+    border-top: 1px solid var(--divider-color);
+    margin: 1.5rem 0;
+    height: 0;
+    clear: both;
+    }
 
 /* Opacity */
 
@@ -375,7 +420,85 @@ SUB, .sub { bottom: -.25em; }
 .op-95pc { opacity: .95; }
 .op-100pc { opacity: 1; }
 
-/* ===[ LAYOUT ]======================================================== */
+.hidden-text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+    }
+
+.delayed { display: none; }
+
+/* ===[ BLOCK MODEL ]=================================================== */
+
+/* Display */
+
+.d-block, .block, .displayed { display: block; }
+.d-contents { display: contents; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+.d-inline, .inline { display: inline; }
+.d-inline-block, .inline-block, .d-iblock, .dib { display: inline-block; }
+.d-none, .hide, .hidden { display: none; }
+
+/* Visibility */
+
+.v-visible, .visible { visibility: visible; }
+.v-hidden, .invisible { visibility: hidden; }
+.v-collapse { visibility: collapse; }
+
+/* Vertical Align */
+
+.va-baseline { vertical-align: baseline; }
+.va-bottom { vertical-align: bottom; }
+.va-middle { vertical-align: middle; }
+.va-text-bottom { vertical-align: text-bottom; }
+.va-text-top { vertical-align: text-top; }
+.va-top { vertical-align: top; }
+
+/* Overflow */
+
+.ov-auto { overflow: auto; }
+.ov-clip { overflow: clip; }
+.ov-hidden { overflow: hidden; }
+.ov-scroll { overflow: scroll; }
+.ov-visible { overflow: visible; }
+
+/* Axis — X */
+.ovx-auto { overflow-x: auto; }
+.ovx-clip { overflow-x: clip; }
+.ovx-hidden { overflow-x: hidden; }
+.ovx-scroll { overflow-x: scroll; }
+.ovx-visible { overflow-x: visible; }
+
+/* Axis — Y */
+.ovy-auto { overflow-y: auto; }
+.ovy-clip { overflow-y: clip; }
+.ovy-hidden { overflow-y: hidden; }
+.ovy-scroll { overflow-y: scroll; }
+.ovy-visible { overflow-y: visible; }
+
+/* Position */
+
+/* Z-index */
+
+/* Float/Clear */
+
+.fl-left { float: left; }
+.fl-right { float: right; }
+
+.clearpd { padding-top: .02em; padding-bottom: .02em; }
+.clearwd { width: 100%; overflow: hidden; }
+
+.clearer { overflow: hidden; }
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+/* ===[ SPACING ]======================================================= */
 
 /*
 Paddings
@@ -772,6 +895,8 @@ m-unset, mt-unset, mr-unset, mb-unset, ml-unset, mx-unset, my-unset
 .ml-unset { margin-left: unset; }
 .mx-unset { margin-inline: unset; }
 .my-unset { margin-block: unset; }
+
+/* ===[ SIZE ]========================================================== */
 
 /*
 Width
@@ -1382,6 +1507,8 @@ maxh-0, maxh-none, maxh-unset
 .maxh-none { max-height: none; }
 .maxh-unset { max-height: unset; }
 
+/* ===[ LAYOUT ]======================================================== */
+
 /* Layout Container */
 
 .layout-container {
@@ -1392,6 +1519,54 @@ maxh-0, maxh-none, maxh-unset
     max-width: var(--layout-container-max-width);
     }
 
+/* Gap/Flex/Grid */
+
+
+
+
+
+
+
+/* ===[ FORMS ]======================================================== */
+
+INPUT[type="radio"] { cursor: pointer; }
+INPUT[type="submit"] { cursor: pointer; }
+
+/* Cursor */
+
+.cur-auto { cursor: auto; }
+.cur-default { cursor: default; }
+.cur-pointer, .clickable { cursor: pointer; }
+.cur-text { cursor: text; }
+.cur-move { cursor: move; }
+.cur-not-allowed { cursor: not-allowed; }
+.cur-grab { cursor: grab; }
+.cur-grabbing { cursor: grabbing; }
+
+/* ===[ TABLETS ]======================================================= */
+
+
+
+
+
+
+
+
+
+
+/* ===[ PHONES ]======================================================== */
+
+
+
+
+
+
+
+
+
+
+
+/* ===[ PRINT ]========================================================= */
 
 
 
