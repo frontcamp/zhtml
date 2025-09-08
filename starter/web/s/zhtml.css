@@ -360,8 +360,183 @@ SUB, .sub { bottom: -0.25em; }
 
 /* ===[ LAYOUT ]======================================================== */
 
+/*
+Paddings
 
+WARNING: In selector names, "pc" means "%" (percent), not pica!
 
+p-XY   padding:        XY [Y=px|em|pc];
+pt-XY  padding-top:    XY [Y=px];
+pr-XY  padding-right:  XY [Y=px];
+pb-XY  padding-bottom: XY [Y=px];
+pl-XY  padding-left:   XY [Y=px];
+px-XY  padding-inline: XY [Y=px|em|pc];
+py-XY  padding-block:  XY [Y=px|em];
+
+X = px: 5-50, step 5
+    em: .25-3, step .25
+    pc: 5,10,15,20,25,30,33,35,40,50,66,75,100
+
+em naming: 025=0.25; 05=0.5; 175=1.75
+
+p-0, pt-0, pr-0, pb-0, pl-0, px-0, py-0 - w/o units
+p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
+
+Order:
+p-5px, p-10px, ...
+p-025em, p-05em, ...
+p-5pc, p-10pc, ...
+pt-5px, pr-5px, pb-5px, pl-5px
+pt-10px, pr-10px, pb-10px, pl-10px
+...
+px-5px, px-10px, ...
+px-025em, px-05em, ...
+px-5pc, px-10pc, ...
+py-5px, py-10px, ...
+py-025em, py-05em, ...
+p-0, pt-0, pr-0, pb-0, pl-0, px-0, py-0
+p-unset, pt-unset, pr-unset, pb-unset, pl-unset, px-unset, py-unset
+*/
+
+/* ===== PADDING UTILITIES (ORDER-PRESERVING) ===== */
+
+/* p-XY, px */
+.p-5px  { padding: 5px;  }
+.p-10px { padding: 10px; }
+.p-15px { padding: 15px; }
+.p-20px { padding: 20px; }
+.p-25px { padding: 25px; }
+.p-30px { padding: 30px; }
+.p-35px { padding: 35px; }
+.p-40px { padding: 40px; }
+.p-45px { padding: 45px; }
+.p-50px { padding: 50px; }
+
+/* p-XY, em */
+.p-025em { padding: 0.25em; }
+.p-05em  { padding: 0.50em; }
+.p-075em { padding: 0.75em; }
+.p-1em   { padding: 1.00em; }
+.p-125em { padding: 1.25em; }
+.p-15em  { padding: 1.50em; }
+.p-175em { padding: 1.75em; }
+.p-2em   { padding: 2.00em; }
+.p-225em { padding: 2.25em; }
+.p-25em  { padding: 2.50em; }
+.p-275em { padding: 2.75em; }
+.p-3em   { padding: 3.00em; }
+
+/* p-XY, pc (%) */
+.p-5pc  { padding: 5%;  }
+.p-10pc { padding: 10%; }
+.p-15pc { padding: 15%; }
+.p-20pc { padding: 20%; }
+.p-25pc { padding: 25%; }
+.p-30pc { padding: 30%; }
+.p-33pc { padding: 33%; }
+.p-35pc { padding: 35%; }
+.p-40pc { padding: 40%; }
+.p-50pc { padding: 50%; }
+.p-66pc { padding: 66%; }
+.p-75pc { padding: 75%; }
+.p-100pc{ padding: 100%; }
+
+/* pt/pr/pb/pl, px */
+.pt-5px  { padding-top: 5px;  } .pr-5px  { padding-right: 5px;  } .pb-5px  { padding-bottom: 5px;  } .pl-5px  { padding-left: 5px;  }
+.pt-10px { padding-top: 10px; } .pr-10px { padding-right: 10px; } .pb-10px { padding-bottom: 10px; } .pl-10px { padding-left: 10px; }
+.pt-15px { padding-top: 15px; } .pr-15px { padding-right: 15px; } .pb-15px { padding-bottom: 15px; } .pl-15px { padding-left: 15px; }
+.pt-20px { padding-top: 20px; } .pr-20px { padding-right: 20px; } .pb-20px { padding-bottom: 20px; } .pl-20px { padding-left: 20px; }
+.pt-25px { padding-top: 25px; } .pr-25px { padding-right: 25px; } .pb-25px { padding-bottom: 25px; } .pl-25px { padding-left: 25px; }
+.pt-30px { padding-top: 30px; } .pr-30px { padding-right: 30px; } .pb-30px { padding-bottom: 30px; } .pl-30px { padding-left: 30px; }
+.pt-35px { padding-top: 35px; } .pr-35px { padding-right: 35px; } .pb-35px { padding-bottom: 35px; } .pl-35px { padding-left: 35px; }
+.pt-40px { padding-top: 40px; } .pr-40px { padding-right: 40px; } .pb-40px { padding-bottom: 40px; } .pl-40px { padding-left: 40px; }
+.pt-45px { padding-top: 45px; } .pr-45px { padding-right: 45px; } .pb-45px { padding-bottom: 45px; } .pl-45px { padding-left: 45px; }
+.pt-50px { padding-top: 50px; } .pr-50px { padding-right: 50px; } .pb-50px { padding-bottom: 50px; } .pl-50px { padding-left: 50px; }
+
+/* px-XY (inline), px */
+.px-5px  { padding-inline: 5px;  }
+.px-10px { padding-inline: 10px; }
+.px-15px { padding-inline: 15px; }
+.px-20px { padding-inline: 20px; }
+.px-25px { padding-inline: 25px; }
+.px-30px { padding-inline: 30px; }
+.px-35px { padding-inline: 35px; }
+.px-40px { padding-inline: 40px; }
+.px-45px { padding-inline: 45px; }
+.px-50px { padding-inline: 50px; }
+
+/* px-XY (inline), em */
+.px-025em { padding-inline: .25em;  }
+.px-05em  { padding-inline: .5em;   }
+.px-075em { padding-inline: .75em;  }
+.px-1em   { padding-inline: 1em;    }
+.px-125em { padding-inline: 1.25em; }
+.px-15em  { padding-inline: 1.5em;  }
+.px-175em { padding-inline: 1.75em; }
+.px-2em   { padding-inline: 2em;    }
+.px-225em { padding-inline: 2.25em; }
+.px-25em  { padding-inline: 2.5em;  }
+.px-275em { padding-inline: 2.75em; }
+.px-3em   { padding-inline: 3em;    }
+
+/* px-XY (inline), pc (%) */
+.px-5pc  { padding-inline: 5%;  }
+.px-10pc { padding-inline: 10%; }
+.px-15pc { padding-inline: 15%; }
+.px-20pc { padding-inline: 20%; }
+.px-25pc { padding-inline: 25%; }
+.px-30pc { padding-inline: 30%; }
+.px-33pc { padding-inline: 33%; }
+.px-35pc { padding-inline: 35%; }
+.px-40pc { padding-inline: 40%; }
+.px-50pc { padding-inline: 50%; }
+.px-66pc { padding-inline: 66%; }
+.px-75pc { padding-inline: 75%; }
+.px-100pc{ padding-inline: 100%;}
+
+/* py-XY (block) — px */
+.py-5px  { padding-block: 5px;  }
+.py-10px { padding-block: 10px; }
+.py-15px { padding-block: 15px; }
+.py-20px { padding-block: 20px; }
+.py-25px { padding-block: 25px; }
+.py-30px { padding-block: 30px; }
+.py-35px { padding-block: 35px; }
+.py-40px { padding-block: 40px; }
+.py-45px { padding-block: 45px; }
+.py-50px { padding-block: 50px; }
+
+/* py-XY (block), em */
+.py-025em { padding-block: .25em;  }
+.py-05em  { padding-block: .5em;   }
+.py-075em { padding-block: .75em;  }
+.py-1em   { padding-block: 1em;    }
+.py-125em { padding-block: 1.25em; }
+.py-15em  { padding-block: 1.5em;  }
+.py-175em { padding-block: 1.75em; }
+.py-2em   { padding-block: 2em;    }
+.py-225em { padding-block: 2.25em; }
+.py-25em  { padding-block: 2.5em;  }
+.py-275em { padding-block: 2.75em; }
+.py-3em   { padding-block: 3em;    }
+
+/* zeros (no units) */
+.p-0  { padding:        0; }
+.pt-0 { padding-top:    0; }
+.pr-0 { padding-right:  0; }
+.pb-0 { padding-bottom: 0; }
+.pl-0 { padding-left:   0; }
+.px-0 { padding-inline: 0; }
+.py-0 { padding-block:  0; }
+
+/* unset */
+.p-unset  { padding:        unset; }
+.pt-unset { padding-top:    unset; }
+.pr-unset { padding-right:  unset; }
+.pb-unset { padding-bottom: unset; }
+.pl-unset { padding-left:   unset; }
+.px-unset { padding-inline: unset; }
+.py-unset { padding-block:  unset; }
 
 
 
