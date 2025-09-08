@@ -1519,13 +1519,40 @@ maxh-0, maxh-none, maxh-unset
     max-width: var(--layout-container-max-width);
     }
 
-/* Gap/Flex/Grid */
+/* Layout Columns */
 
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    }
 
+.container.reversed {
+    flex-direction: row-reverse;
+    }
 
+    .container > .division {
+        box-sizing: border-box;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+        }
 
+    .container > .division.dv-1-2 {}
+    
+    .container > .division.dv-1-3 {}
+    .container > .division.dv-2-3 { flex-grow: 2; }
 
+    .container > .division.dv-1-4 {}
+    .container > .division.dv-2-4 { flex-grow: 2; }
+    .container > .division.dv-3-4 { flex-grow: 3; }
 
+    .container > .division.dv-1-5 {}
+    .container > .division.dv-2-5 { flex-grow: 2; }
+    .container > .division.dv-3-5 { flex-grow: 3; }
+    .container > .division.dv-4-5 { flex-grow: 4; }
 
 /* ===[ FORMS ]======================================================== */
 
