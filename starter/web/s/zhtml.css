@@ -1579,6 +1579,7 @@ maxh-0, maxh-none, maxh-unset
         flex-shrink: 1;
         flex-basis: 0%;
         padding: var(--column-padding);
+        min-width: 0;  /* fix long words/code issue */
         }
 
     .columns > .column.cl-1-2 {}
