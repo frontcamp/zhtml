@@ -12,6 +12,7 @@ ZHTML is a mini CSS framework for rapid startup prototyping and simple HTML/CSS 
 
 **ZHTML Principles**
 
++ Configuration-first via CSS variables
 + Baseline markup, minimal core utilities
 + Deep styling via components
 + Simplified styling for basic elements and info-content
@@ -55,7 +56,8 @@ QUICK START
 -----------
 
 
-Copy /starter as is to your project, or open /starter/index.html to see how styles are connected and how to structure the markup.
-For more usage instructions, open the HTML documentation in the /docs folder.
-
+1. Copy the contents of /starter into your project.
+2. See /starter/index.html for linking styles and structuring markup.
+3. Configure the CSS variables to fit your needs.
+4. For full usage, open the HTML docs in /docs.
 
