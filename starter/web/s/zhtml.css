@@ -16,7 +16,8 @@ Author: Maksym Plaksin <maxim.plaksin@gmail.com>
  * SIZE
  * LAYOUT
  * FORMS
- * TABLETS
+ * ALL MOBILE DEVICES
+ * TABLETS ONLY
  * PHONES
  * PRINT
  */
@@ -36,9 +37,9 @@ WARNING: Matching @media rules are at the bottom. Keep them in sync manually!
 :root {
     --html-font-size: 100%;  /* 100% = 16px; 112.5% = 18px; */
 
-    --layout-container-max-width: 960px;    /* layout width (maximal) */
-    --layout-container-margin-block: 1em;   /* vertical margins */
-    --layout-container-padding-inline: 0;   /* horizontal paddings */
+    --layout-container-max-width: 960px;       /* layout width (maximal) */
+    --layout-container-margin-block: 1em;      /* vertical margins */
+    --layout-container-padding-inline: .75em;  /* horizontal paddings */
 
     --body-font-color: #000;
     --body-font-family: Arial, sans-serif;
@@ -499,11 +500,13 @@ TABLE {
 
 .fl-left { float: left; }
 .fl-right { float: right; }
+.fl-none { float: none; }
 
-.clearpd { padding-top: .02em; padding-bottom: .02em; }
-.clearwd { width: 100%; overflow: hidden; }
+.clear-left  { clear: left; }
+.clear-right { clear: right; }
+.clear-both  { clear: both; }
 
-.clearer { overflow: hidden; }
+.flow-root { display: flow-root; }
 .clearfix:after {
     content: "";
     display: table;
@@ -1539,7 +1542,6 @@ maxh-0, maxh-none, maxh-unset
     padding-inline: var(--layout-container-padding-inline);
     margin-block: var(--layout-container-margin-block);
     margin-inline: auto;
-    width: 100%;
     max-width: var(--layout-container-max-width);
     }
 
@@ -1664,16 +1666,25 @@ maxh-0, maxh-none, maxh-unset
     }
 
     .insertion > FIGURE {
+        text-align: center;
         margin: 0;
-        width: max-content;
         max-width: 100%;
         display: inline-block; 
+        }
+
+    .insertion.left > FIGURE,
+    .insertion.start > FIGURE,
+    .insertion.float-start > FIGURE,
+    .insertion.right > FIGURE,
+    .insertion.end > FIGURE,
+    .insertion.float-end > FIGURE {
+        width: max-content;
         }
     
     .insertion IMG {
         max-inline-size: 100%;
         max-width: 100%;
-        display: block;
+        display: inline;
         block-size: auto;
         }
     
