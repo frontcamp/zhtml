@@ -61,3 +61,9 @@ QUICK START
 3. Configure the CSS variables to fit your needs.
 4. For full usage, open the HTML docs in /docs.
 
+
+LIMITATIONS
+-----------
+
+RTL & vertical layouts are not supported in current version.
+
