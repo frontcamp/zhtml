@@ -161,7 +161,7 @@ SUB, .sub { bottom: -.25em; }
 
 CODE, .code, PRE, .pre, KBD, SAMP { font-family: "Courier New", Courier, monospace; }
 
-CODE, .code { white-space: normal; }
+CODE, .code {}
 
 PRE, .pre {
     white-space: pre-wrap;

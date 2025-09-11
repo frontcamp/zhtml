@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ZHTML Docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- ZHTML framework -->
+    <link rel="stylesheet" href="../starter/web/s/reset.css">
+    <link rel="stylesheet" href="../starter/web/s/zhtml.css">
+
+    <!-- ZHTML modules -->
+    <!--link rel="stylesheet" href="../starter/web/s/zhtml.legacy.css"-->
+    <!--link rel="stylesheet" href="../starter/web/s/zhtml.colors.css"-->
+
+    <!-- Project defined styles -->
+    <link rel="stylesheet" href="web/s/global.css">
+    <link rel="stylesheet" href="web/s/mobile.css">
+    
+    <script src="../starter/web/s/global.js" defer></script>
+</head>
+<body>
+
+<main class="layout-container">
+    <section>
+    
+        <h1 class="fw-bold ta-center">ZHTML &ndash; Layout</h1>
+
+        <p class="ta-center"><a href="index.html">Back to Index</a></p>
+
+        <div class="divider"></div>
+
+
+<h2>Layout Container</h2>
+<p><code>.layout-container</code> centers content, sets max width and paddings via variables.</p>
+<pre><code>&lt;div class="layout-container"&gt;...&lt;/div&gt;</code></pre>
+
+
+<h2>Grid: Structural Columns</h2>
+<h3>Container &amp; Divisions</h3>
+<p><code>.container</code> (flex row, no wrap). Children use <code>.division</code>. Grow ratios via <code>.dv-*</code>:</p>
+<ul>
+<li><code>.dv-2-3</code> → grow 2; <code>.dv-3-4</code> → grow 3; …</li>
+<li><code>.reversed</code> flips order</li>
+</ul>
+<pre><code>&lt;div class="container"&gt;
+&lt;div class="division dv-2-3"&gt;A&lt;/div&gt;
+&lt;div class="division"&gt;B&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+<h3>Content Columns</h3>
+<p><code>.columns</code> with <code>.column</code> children, gap via <code>--column-gap-inline</code>, padding via <code>--column-padding</code>. Grow ratios via <code>.cl-*</code>.</p>
+<pre><code>&lt;div class="columns"&gt;
+&lt;div class="column cl-1-2"&gt;Left&lt;/div&gt;
+&lt;div class="column"&gt;Right&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+
+<h2>Insertions (media/figure/quote)</h2>
+<p><code>.insertion</code> aligns content: <code>.left/.start/.float-start</code>, <code>.right/.end/.float-end</code>, <code>.center/.float-none</code>. Use <code>.flow-stop</code> to clear floats.</p>
+<pre><code>&lt;figure class="insertion right"&gt;...&lt;/figure&gt;
+&lt;div class="flow-stop"&gt;&lt;/div&gt;</code></pre>
+
+
+        <div class="divider"></div>
+
+        <p class="ta-center"><a href="index.html">Back to Index</a></p>
+
+    </section>
+</main>
+
+<br><br>
+
+</body>
+</html>

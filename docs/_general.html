@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ZHTML Docs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- ZHTML framework -->
+    <link rel="stylesheet" href="../starter/web/s/reset.css">
+    <link rel="stylesheet" href="../starter/web/s/zhtml.css">
+
+    <!-- ZHTML modules -->
+    <!--link rel="stylesheet" href="../starter/web/s/zhtml.legacy.css"-->
+    <!--link rel="stylesheet" href="../starter/web/s/zhtml.colors.css"-->
+
+    <!-- Project defined styles -->
+    <link rel="stylesheet" href="web/s/global.css">
+    <link rel="stylesheet" href="web/s/mobile.css">
+    
+    <script src="../starter/web/s/global.js" defer></script>
+</head>
+<body>
+
+<main class="layout-container">
+    <section>
+    
+        <h1 class="fw-bold ta-center">ZHTML &ndash; General</h1>
+
+        <p class="ta-center"><a href="index.html">Back to Index</a></p>
+
+        <div class="divider"></div>
+
+<p>ZHTML provides sane defaults, CSS variables, and reset-friendly base styles. Configure variables in <code>:root</code> to change typography, colors, container width, and spacing.</p>
+
+<h2>Root CSS Variables</h2>
+<pre><code>:root {
+--html-font-size: 100%;
+--layout-container-max-width: 960px;
+--layout-container-margin-block: 1em;
+--layout-container-padding-inline: .75em;
+--body-font-color: #000;
+--body-font-family: Arial, sans-serif;
+--body-line-height: 1.5;
+--body-background: #fff;
+--h1-fs: 2.00rem; --h2-fs: 1.75rem; --h3-fs: 1.50rem;
+--h4-fs: 1.35rem; --h5-fs: 1.25rem; --h6-fs: 1.15rem;
+--hx-lh: 1.25; --hx-mb: 1em .5em;
+--link-color: #06f; --link-hover-color: #39f;
+--divider-color: currentColor;
+--column-gap-inline: 1em; --column-padding: .35em 1.5em;
+}</code></pre>
+
+<h2>Base Elements</h2>
+<p>Global box-sizing on <code>html</code>, neutral margins, and body defaults (font, color, background, min-height). Reset/normalize is expected to be loaded beforehand.</p>
+
+        <div class="divider"></div>
+
+        <p class="ta-center"><a href="index.html">Back to Index</a></p>
+
+    </section>
+</main>
+
+<br><br>
+
+</body>
+</html>
