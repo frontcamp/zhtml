@@ -1,6 +1,7 @@
 
 BODY {
-    font-family: "Open Sans";
+    font-family: "Open Sans", -apple-system, system-ui, "Segoe UI", Roboto,
+             "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     background-color: #eaeaea;
     }
 
